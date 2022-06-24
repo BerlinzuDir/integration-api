@@ -1,0 +1,21 @@
+version = 0.1
+[testing]
+[testing.deploy]
+[testing.deploy.parameters]
+stack_name = "integration-api-sam"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1e76oytwe22sp"
+s3_prefix = "integration-api-sam"
+region = "eu-central-1"
+capabilities = "CAPABILITY_IAM"
+image_repositories = []
+
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "integration-api-sam"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1e76oytwe22sp"
+s3_prefix = "integration-api-sam"
+region = "eu-central-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = []
