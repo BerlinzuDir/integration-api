@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from src.api.endpoints import transform
+from src.api.endpoints import integrate_products
 
 
 router = APIRouter()

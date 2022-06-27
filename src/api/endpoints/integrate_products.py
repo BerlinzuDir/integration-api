@@ -6,5 +6,5 @@ router = APIRouter()
 
 
 @router.post("/", response_model=Dict[str, str])
-async def transform(products: Dict):
+async def integrate_products(products: Dict):
     return products
