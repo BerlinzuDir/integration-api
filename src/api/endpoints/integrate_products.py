@@ -7,6 +7,8 @@ from fastapi.security import HTTPBasic, HTTPBasicCredentials
 
 from dotenv import load_dotenv
 
+from src.types import Route
+
 router = APIRouter()
 security = HTTPBasic()
 
@@ -29,3 +31,6 @@ async def integrate_products(products: Dict, credentials: HTTPBasicCredentials =
     return {
         "products": products,
     }
+
+
+route = Route(router=router, prefix="/transform", tags=["Transform"])

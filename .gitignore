@@ -5,4 +5,5 @@ __pycache__
 .aws-sam
 src/requirements.txt
 artifact.zip
-src/credentials.env
+
+*.env
