@@ -6,22 +6,22 @@ from src.types import Route
 from .transform import route
 
 
-def test_transform_authentification_access_granted():
+def test_integrate_products_authentification_access_granted():
     test_client = create_test_client(route)
-    res = test_client.post("/api/transform/", json=json.dumps({"test":"test"}))
     import pdb;pdb.set_trace()
+    test_client.post("/api/transform", json=json.dumps({"test":"test"}))
     assert False
 
 
-def test_transform_authentification_access_denied():
+def test_integrate_products_authentification_access_denied():
     assert False
 
 
-def test_transform_rejects_faulty_data():
+def test_integrate_products_rejects_faulty_data():
     assert True
 
 
-def test_transform_returns_success_message_on_success():
+def test_integrate_products_returns_success_message_on_success():
     assert True
 
 

@@ -6,6 +6,8 @@ from fastapi.security import HTTPBasic, HTTPBasicCredentials
 
 from dotenv import load_dotenv
 
+from src.types import Route
+
 router = APIRouter()
 security = HTTPBasic()
 
@@ -28,3 +30,6 @@ def transform(products, credentials: HTTPBasicCredentials = Depends(security)):
     return {
         "products": products,
     }
+
+
+route = Route(router=router, prefix="/transform", tags=["Transform"])
