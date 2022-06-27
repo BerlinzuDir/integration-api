@@ -8,8 +8,8 @@ from .transform import route
 
 
 def test_transform_authentification_access_granted():
-    os.environ['LOGIN'] = "test"
-    os.environ['PASSWORD'] = "testpw"
+    os.environ["LOGIN"] = "test"
+    os.environ["PASSWORD"] = "testpw"
     test_client = create_test_client(route)
     test_data = {"test": "test"}
     res = test_client.post("/transform/", headers={"Authorization": "Basic dGVzdDp0ZXN0cHc="}, json=test_data)
