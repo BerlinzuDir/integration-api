@@ -1,8 +1,8 @@
 import secrets
 import os
-from typing import Dict
+import pandas as pd
 
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status, File, UploadFile
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 
 from dotenv import load_dotenv
@@ -11,6 +11,16 @@ from src.types import Route
 
 router = APIRouter()
 security = HTTPBasic()
+
+
+@router.post("/")
+async def integrate_products(file: UploadFile, credentials: HTTPBasicCredentials = Depends(security)):
+    validate(credentials)
+    df = pd.read_csv(file.file, delimiter=",")
+    shop = set(df["shop"].to_numpy())
+    return {
+        "shops": shop,
+    }
 
 
 def validate(credentials: HTTPBasicCredentials):
@@ -25,12 +35,4 @@ def validate(credentials: HTTPBasicCredentials):
         )
 
 
-@router.post("/")
-async def integrate_products(products: Dict, credentials: HTTPBasicCredentials = Depends(security)):
-    validate(credentials)
-    return {
-        "products": products,
-    }
-
-
-route = Route(router=router, prefix="/transform", tags=["Transform"])
+route = Route(router=router, prefix="/integrate_products", tags=["Integrate Products"])
