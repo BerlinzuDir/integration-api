@@ -17,9 +17,9 @@ security = HTTPBasic()
 async def integrate_products(file: UploadFile, credentials: HTTPBasicCredentials = Depends(security)):
     validate(credentials)
     df = pd.read_csv(file.file, delimiter=",")
-    shop = set(df["shop"].to_numpy())
+    shops = set(df["shop"].to_numpy())
     return {
-        "shops": shop,
+        "shops": shops,
     }
 
 
