@@ -18,7 +18,7 @@ jobs:
       with:
         LOGIN: ${{ secrets.LOGIN }}
         PASSWORD: ${{ secrets.PASSWORD }}
-        directory: .
+        directory: ./src
         file_name: credentials.env
         fail_on_empty: true
 
