@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
-from src.api.endpoints import transform
+from src.api.endpoints.transform import route
 
 
 router = APIRouter()
-router.include_router(transform.router, prefix="/transform", tags=["Transform"])
+router.include_router(**route)
