@@ -1,10 +1,30 @@
-from typing import Dict
+import secrets
+import os
 
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi.security import HTTPBasic, HTTPBasicCredentials
+
+from dotenv import load_dotenv
 
 router = APIRouter()
+security = HTTPBasic()
 
 
-@router.post("/", response_model=Dict[str, str])
-async def integrate_products(products: Dict):
-    return products
+def validate(credentials: HTTPBasicCredentials):
+    load_dotenv("credentials.env")
+    correct_username = secrets.compare_digest(credentials.username, os.getenv("LOGIN"))
+    correct_password = secrets.compare_digest(credentials.password, os.getenv("PASSWORD"))
+    if not (correct_username and correct_password):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Incorrect email or password",
+            headers={"WWW-Authenticate": "Basic"},
+        )
+
+
+@router.post("/")
+async def integrate_products(products, credentials: HTTPBasicCredentials = Depends(security)):
+    validate(credentials)
+    return {
+        "products": products,
+    }
