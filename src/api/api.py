@@ -4,4 +4,4 @@ from src.api.endpoints.transform import route
 
 
 router = APIRouter()
-router.include_router(route)
+router.include_router(**route)

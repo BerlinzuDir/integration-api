@@ -1,5 +1,6 @@
 import secrets
 import os
+from typing import Dict
 
 from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
@@ -25,7 +26,7 @@ def validate(credentials: HTTPBasicCredentials):
 
 
 @router.post("/")
-def transform(products, credentials: HTTPBasicCredentials = Depends(security)):
+def transform(products: Dict, credentials: HTTPBasicCredentials = Depends(security)):
     validate(credentials)
     return {
         "products": products,

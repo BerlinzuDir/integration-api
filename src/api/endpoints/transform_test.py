@@ -1,4 +1,5 @@
 import json
+import os
 
 from fastapi import FastAPI
 from starlette.testclient import TestClient
@@ -7,14 +8,18 @@ from .transform import route
 
 
 def test_transform_authentification_access_granted():
+    os.environ['LOGIN'] = "test"
+    os.environ['PASSWORD'] = "testpw"
     test_client = create_test_client(route)
-    res = test_client.post("/api/transform/", json=json.dumps({"test":"test"}))
-    import pdb;pdb.set_trace()
-    assert False
+    test_data = {"test": "test"}
+    res = test_client.post("/transform/", headers={"Authorization": "Basic dGVzdDp0ZXN0cHc="}, json=test_data)
+    assert json.loads(res.content)["products"] == test_data
 
 
 def test_transform_authentification_access_denied():
-    assert False
+    test_client = create_test_client(route)
+    res = test_client.post("/transform/", headers={"Authorization": "Basic Blödsinn"}, data={"test": "test"})
+    assert json.loads(res.content)["detail"] == "Invalid authentication credentials"
 
 
 def test_transform_rejects_faulty_data():
