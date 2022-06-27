@@ -14,12 +14,10 @@ security = HTTPBasic()
 
 
 @router.post("/")
-async def integrate_products(file: UploadFile, credentials: HTTPBasicCredentials = Depends(security)):
+async def integrate_products(credentials: HTTPBasicCredentials = Depends(security)):
     validate(credentials)
-    df = pd.read_csv(file.file, delimiter=",")
-    shops = set(df["shop"].to_numpy())
     return {
-        "shops": shops,
+        "shops": "test",
     }
 
 
