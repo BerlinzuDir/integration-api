@@ -1,17 +1,15 @@
 import json
 import os
-import pdb
-from typing import Dict
 
 import pandas as pd
 import pytest
-from fastapi import FastAPI, UploadFile
+from fastapi import FastAPI
 from requests.auth import HTTPBasicAuth
 from starlette.testclient import TestClient
 from src.types import Route
 from .integrate_products import route
 
-USERNAME = 'test'
+USERNAME = "test"
 PASSWORD = "testpw"
 
 
@@ -30,7 +28,7 @@ def test_integrate_products_authentification_status_401(test_data):
 
 def test_integrate_products_faulty_data_status_422():
     test_client = _setup()
-    response = _post_test_csv_file(client=test_client, data=pd.DataFrame({'wrong': ["data"]}))
+    response = _post_test_csv_file(client=test_client, data=pd.DataFrame({"wrong": ["data"]}))
     assert response.status_code == 422
     assert json.loads(response.content)["detail"] == "Invalid file structure"
 
@@ -41,13 +39,13 @@ def _setup():
 
 
 def _post_test_csv_file(
-        client: TestClient,
-        data: pd.DataFrame,
-        auth: HTTPBasicAuth = HTTPBasicAuth(USERNAME, PASSWORD),
+    client: TestClient,
+    data: pd.DataFrame,
+    auth: HTTPBasicAuth = HTTPBasicAuth(USERNAME, PASSWORD),
 ):
     filename = "test.csv"
     data.to_csv(filename)
-    f = open(filename, 'r')
+    f = open(filename, "r")
     try:
         response = client.post("/integrate_products/", auth=auth, files={"file": f})
     finally:
@@ -69,5 +67,4 @@ def _create_test_client(route: Route):
 
 @pytest.fixture
 def test_data() -> pd.DataFrame:
-    yield pd.read_csv("fixtures/products_testfile.csv", delimiter='\t')
-
+    yield pd.read_csv("fixtures/products_testfile.csv", delimiter="\t")

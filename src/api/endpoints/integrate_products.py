@@ -2,7 +2,7 @@ import secrets
 import os
 import pandas as pd
 
-from fastapi import APIRouter, Depends, HTTPException, status, File, UploadFile
+from fastapi import APIRouter, Depends, HTTPException, status, UploadFile
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 
 from dotenv import load_dotenv
