@@ -15,7 +15,7 @@ security = HTTPBasic()
 
 @router.post("/")
 async def integrate_products(file: UploadFile, credentials: HTTPBasicCredentials = Depends(security)):
-    validate(credentials)
+    _validate(credentials)
     df = pd.read_csv(file.file, delimiter=",")
     shops = set(df["shop"].to_numpy())
 
@@ -24,14 +24,14 @@ async def integrate_products(file: UploadFile, credentials: HTTPBasicCredentials
     }
 
 
-def validate(credentials: HTTPBasicCredentials):
+def _validate(credentials: HTTPBasicCredentials):
     load_dotenv("credentials.env")
-    correct_username = secrets.compare_digest(credentials.username, os.getenv("LOGIN"))
+    correct_username = secrets.compare_digest(credentials.username, os.getenv("USERNAME"))
     correct_password = secrets.compare_digest(credentials.password, os.getenv("PASSWORD"))
     if not (correct_username and correct_password):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Incorrect email or password",
+            detail="Incorrect username or password",
             headers={"WWW-Authenticate": "Basic"},
         )
 
