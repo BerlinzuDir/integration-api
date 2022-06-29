@@ -36,7 +36,7 @@ def test_integrate_products_authentification_status_401(test_data):
     assert json.loads(response.content)["detail"] == "Incorrect username or password"
 
 
-def test_integrate_products_faulty_data_status_422():
+def test_integrate_products_missing_columns_status_422():
     test_client = _setup()
     response = _post_test_csv_file(client=test_client, data=pd.DataFrame({"wrong": ["data"]}))
     assert response.status_code == 422
