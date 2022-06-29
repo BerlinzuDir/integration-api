@@ -30,18 +30,18 @@ def test_integrate_products_lozuka_api_authentification_error_response_status_20
     response = _post_test_csv_file(client=test_client, data=test_data)
     assert response.status_code == 200
     assert json.loads(response.content) == {
-        'detail': {
-            'failed': {
-                'Almahaba Supermarkt': {
-                    '1': {'content': {'message': 'Invalid credentials.'}, 'status_code': 401},
-                    '2': {'content': {'message': 'Invalid credentials.'}, 'status_code': 401},
-                    '3': {'content': {'message': 'Invalid credentials.'}, 'status_code': 401},
-                    '4': {'content': {'message': 'Invalid credentials.'}, 'status_code': 401},
-                    '5': {'content': {'message': 'Invalid credentials.'}, 'status_code': 401},
-                    '6': {'content': {'message': 'Invalid credentials.'}, 'status_code': 401},
-                    '7': {'content': {'message': 'Invalid credentials.'}, 'status_code': 401},
-                    '8': {'content': {'message': 'Invalid credentials.'}, 'status_code': 401},
-                    '9': {'content': {'message': 'Invalid credentials.'}, 'status_code': 401}
+        "detail": {
+            "failed": {
+                "Almahaba Supermarkt": {
+                    "1": {"content": {"message": "Invalid credentials."}, "status_code": 401},
+                    "2": {"content": {"message": "Invalid credentials."}, "status_code": 401},
+                    "3": {"content": {"message": "Invalid credentials."}, "status_code": 401},
+                    "4": {"content": {"message": "Invalid credentials."}, "status_code": 401},
+                    "5": {"content": {"message": "Invalid credentials."}, "status_code": 401},
+                    "6": {"content": {"message": "Invalid credentials."}, "status_code": 401},
+                    "7": {"content": {"message": "Invalid credentials."}, "status_code": 401},
+                    "8": {"content": {"message": "Invalid credentials."}, "status_code": 401},
+                    "9": {"content": {"message": "Invalid credentials."}, "status_code": 401},
                 }
             }
         }
@@ -60,15 +60,15 @@ def test_integrate_products_missing_columns_status_422():
     response = _post_test_csv_file(client=test_client, data=pd.DataFrame({"wrong": ["data"]}))
     assert response.status_code == 422
     assert (
-            json.loads(response.content)["detail"]
-            == f"Missing columns: {','.join([column for column in sorted(COLUMNS.keys())])}."
+        json.loads(response.content)["detail"]
+        == f"Missing columns: {','.join([column for column in sorted(COLUMNS.keys())])}."
     )
 
 
 def _post_test_csv_file(
-        client: TestClient,
-        data: pd.DataFrame,
-        auth: HTTPBasicAuth = HTTPBasicAuth(os.getenv("ACCOUNT"), os.getenv("PASSWORD")),
+    client: TestClient,
+    data: pd.DataFrame,
+    auth: HTTPBasicAuth = HTTPBasicAuth(os.getenv("ACCOUNT"), os.getenv("PASSWORD")),
 ):
     filename = "test.csv"
     data.to_csv(filename, sep=";")

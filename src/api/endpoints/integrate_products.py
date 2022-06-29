@@ -58,7 +58,7 @@ def _to_dataframe(file: UploadFile) -> pd.DataFrame:
 
 def _set_types(data: pd.DataFrame) -> pd.DataFrame:
     for column, attribute_type in COLUMNS.items():
-        if column == 'shop':
+        if column == "shop":
             continue
         data[column] = data[column].astype(attribute_type)
     return data
@@ -107,12 +107,15 @@ def _send_shop_products(shop: str, products: List[Dict]) -> Dict[str, Dict]:
         try:
             response.raise_for_status()
         except Exception:
-            failed_requests[product["productNumber"]] = {"content": json.loads(response.content), "status_code": response.status_code}
+            failed_requests[product["productNumber"]] = {
+                "content": json.loads(response.content),
+                "status_code": response.status_code,
+            }
     return failed_requests
 
 
 def _send_product(shop: str, data: Dict):
-    shop = shop.upper().replace(' ', '')
+    shop = shop.upper().replace(" ", "")
     headers = {
         "X-Account": os.getenv(f"{shop}_POA"),
         "Authorization": f"ApiKey {os.getenv(f'{shop}_API_KEY')}",
