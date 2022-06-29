@@ -72,7 +72,10 @@ def _send_to_lozuka(data: json):
     except Exception:
         raise HTTPException(
             status_code=status.HTTP_502_BAD_GATEWAY,
-            detail={"message": f"Lozuka API request failed due to '{json.loads(response.content)}'", "status_code": response.status_code},
+            detail={
+                "message": f"Lozuka API request failed due to '{json.loads(response.content)}'",
+                "status_code": response.status_code,
+            },
             headers={"WWW-Authenticate": "Basic"},
         )
 

@@ -46,7 +46,7 @@ def test_integrate_products_lozuka_api_client_error_response_status_502(test_dat
     assert response.status_code == 502
     assert json.loads(response.content)["detail"] == {
         "message": "Lozuka API request failed due to '{'type': 'errors', 'data': [{'field': 'priceGross', 'message': "
-                   "'priceGross_is_required'}]}'",
+        "'priceGross_is_required'}]}'",
         "status_code": 400,
     }
 
