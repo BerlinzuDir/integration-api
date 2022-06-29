@@ -13,8 +13,6 @@ interactions:
     headers:
       Accept-Encoding:
       - gzip, deflate
-      Authorization:
-      - ApiKey 20af9a3b55765b0a9eb116ea0049f2ccbd8e3427
       Connection:
       - keep-alive
       Content-Length:
@@ -23,8 +21,6 @@ interactions:
       - application/json
       User-Agent:
       - python-requests/2.28.0
-      X-Account:
-      - d8276f24-93e0-4036-9eb8-baf68763ad1f
       accept:
       - '*/*'
     method: POST
@@ -40,7 +36,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 20:05:55 GMT
+      - Wed, 29 Jun 2022 20:37:02 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -77,8 +73,6 @@ interactions:
     headers:
       Accept-Encoding:
       - gzip, deflate
-      Authorization:
-      - ApiKey 1234
       Connection:
       - keep-alive
       Content-Length:
@@ -87,8 +81,6 @@ interactions:
       - application/json
       User-Agent:
       - python-requests/2.28.0
-      X-Account:
-      - 1234
       accept:
       - '*/*'
     method: POST
@@ -104,7 +96,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 20:05:56 GMT
+      - Wed, 29 Jun 2022 20:37:03 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -139,8 +131,6 @@ interactions:
     headers:
       Accept-Encoding:
       - gzip, deflate
-      Authorization:
-      - ApiKey 20af9a3b55765b0a9eb116ea0049f2ccbd8e3427
       Connection:
       - keep-alive
       Content-Length:
@@ -149,8 +139,6 @@ interactions:
       - application/json
       User-Agent:
       - python-requests/2.28.0
-      X-Account:
-      - d8276f24-93e0-4036-9eb8-baf68763ad1f
       accept:
       - '*/*'
     method: POST
@@ -166,7 +154,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 20:05:56 GMT
+      - Wed, 29 Jun 2022 20:37:03 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -202,8 +190,6 @@ interactions:
     headers:
       Accept-Encoding:
       - gzip, deflate
-      Authorization:
-      - ApiKey 20af9a3b55765b0a9eb116ea0049f2ccbd8e3427
       Connection:
       - keep-alive
       Content-Length:
@@ -212,8 +198,6 @@ interactions:
       - application/json
       User-Agent:
       - python-requests/2.28.0
-      X-Account:
-      - d8276f24-93e0-4036-9eb8-baf68763ad1f
       accept:
       - '*/*'
     method: POST
@@ -229,7 +213,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 20:05:57 GMT
+      - Wed, 29 Jun 2022 20:37:06 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -267,8 +251,6 @@ interactions:
     headers:
       Accept-Encoding:
       - gzip, deflate
-      Authorization:
-      - ApiKey 20af9a3b55765b0a9eb116ea0049f2ccbd8e3427
       Connection:
       - keep-alive
       Content-Length:
@@ -277,8 +259,6 @@ interactions:
       - application/json
       User-Agent:
       - python-requests/2.28.0
-      X-Account:
-      - d8276f24-93e0-4036-9eb8-baf68763ad1f
       accept:
       - '*/*'
     method: POST
@@ -294,7 +274,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 20:05:58 GMT
+      - Wed, 29 Jun 2022 20:37:07 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -332,8 +312,6 @@ interactions:
     headers:
       Accept-Encoding:
       - gzip, deflate
-      Authorization:
-      - ApiKey 20af9a3b55765b0a9eb116ea0049f2ccbd8e3427
       Connection:
       - keep-alive
       Content-Length:
@@ -342,8 +320,6 @@ interactions:
       - application/json
       User-Agent:
       - python-requests/2.28.0
-      X-Account:
-      - d8276f24-93e0-4036-9eb8-baf68763ad1f
       accept:
       - '*/*'
     method: POST
@@ -359,7 +335,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 20:05:59 GMT
+      - Wed, 29 Jun 2022 20:37:07 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -393,8 +369,6 @@ interactions:
     headers:
       Accept-Encoding:
       - gzip, deflate
-      Authorization:
-      - ApiKey 20af9a3b55765b0a9eb116ea0049f2ccbd8e3427
       Connection:
       - keep-alive
       Content-Length:
@@ -403,8 +377,6 @@ interactions:
       - application/json
       User-Agent:
       - python-requests/2.28.0
-      X-Account:
-      - d8276f24-93e0-4036-9eb8-baf68763ad1f
       accept:
       - '*/*'
     method: POST
@@ -420,7 +392,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 20:05:59 GMT
+      - Wed, 29 Jun 2022 20:37:08 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -454,8 +426,6 @@ interactions:
     headers:
       Accept-Encoding:
       - gzip, deflate
-      Authorization:
-      - ApiKey 20af9a3b55765b0a9eb116ea0049f2ccbd8e3427
       Connection:
       - keep-alive
       Content-Length:
@@ -464,8 +434,6 @@ interactions:
       - application/json
       User-Agent:
       - python-requests/2.28.0
-      X-Account:
-      - d8276f24-93e0-4036-9eb8-baf68763ad1f
       accept:
       - '*/*'
     method: POST
@@ -481,7 +449,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 20:06:00 GMT
+      - Wed, 29 Jun 2022 20:37:08 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -517,8 +485,6 @@ interactions:
     headers:
       Accept-Encoding:
       - gzip, deflate
-      Authorization:
-      - ApiKey 20af9a3b55765b0a9eb116ea0049f2ccbd8e3427
       Connection:
       - keep-alive
       Content-Length:
@@ -527,8 +493,6 @@ interactions:
       - application/json
       User-Agent:
       - python-requests/2.28.0
-      X-Account:
-      - d8276f24-93e0-4036-9eb8-baf68763ad1f
       accept:
       - '*/*'
     method: POST
@@ -544,7 +508,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 20:06:00 GMT
+      - Wed, 29 Jun 2022 20:37:09 GMT
       referrer-policy:
       - same-origin
       set-cookie:

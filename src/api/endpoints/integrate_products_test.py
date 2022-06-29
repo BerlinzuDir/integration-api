@@ -1,18 +1,23 @@
 import json
 import os
-from typing import Dict
 from dotenv import load_dotenv
 import pandas as pd
 import pytest
 from fastapi import FastAPI
 from requests.auth import HTTPBasicAuth
 from starlette.testclient import TestClient
+
 from .integrate_products import route, COLUMNS
 
 load_dotenv("fixtures/test.env")
 app = FastAPI()
 app.include_router(**route)
 test_client = TestClient(app)
+
+
+@pytest.fixture(scope="module")
+def vcr_config():
+    return {"filter_headers": ["Authorization", "X-Account"]}
 
 
 @pytest.mark.vcr()
@@ -48,14 +53,12 @@ def test_integrate_products_lozuka_api_authentification_error_response_status_20
     }
 
 
-@pytest.mark.vcr()
 def test_integrate_products_authentification_status_401(test_data):
     response = _post_test_csv_file(client=test_client, data=test_data, auth=HTTPBasicAuth("falsche", "credentials"))
     assert response.status_code == 401
     assert json.loads(response.content)["detail"] == "Incorrect username or password"
 
 
-@pytest.mark.vcr()
 def test_integrate_products_missing_columns_status_422():
     response = _post_test_csv_file(client=test_client, data=pd.DataFrame({"wrong": ["data"]}))
     assert response.status_code == 422
