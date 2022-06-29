@@ -47,7 +47,7 @@ def _validate_credentials(credentials: HTTPBasicCredentials):
 
 def _to_dataframe(file: UploadFile) -> pd.DataFrame:
     try:
-        return pd.read_csv(file.file, sep=";", index_col="Unnamed: 0").reset_index(drop=True)
+        return pd.read_csv(file.file, sep=";").reset_index(drop=True)
     except Exception:
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
