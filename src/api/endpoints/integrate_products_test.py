@@ -64,7 +64,7 @@ def test_integrate_products_lozuka_api_authentification_error_response_status_50
 def _post_test_csv_file(
     client: TestClient,
     data: pd.DataFrame,
-    auth: HTTPBasicAuth = HTTPBasicAuth(os.getenv("USERNAME"), os.getenv("PASSWORD")),
+    auth: HTTPBasicAuth = HTTPBasicAuth(os.getenv("ACCOUNT"), os.getenv("PASSWORD")),
 ):
     filename = "test.csv"
     data.to_csv(filename, sep=";")

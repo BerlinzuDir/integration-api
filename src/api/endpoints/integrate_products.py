@@ -13,7 +13,7 @@ from src.types import Route
 
 router = APIRouter()
 security = HTTPBasic()
-load_dotenv()
+load_dotenv("production.env")
 
 
 @router.post("/")
@@ -21,14 +21,14 @@ async def integrate_products(file: UploadFile, credentials: HTTPBasicCredentials
     _validate_credentials(credentials)
     df = _to_dataframe(file)
     _validate_data(df)
-    _send_to_lozuka(data=df.to_json())
-    return {
-        "shops": "dings",
-    }
+    response = _send_to_lozuka(data=df.to_json())
+    return json.loads(response.content)
 
 
 def _validate_credentials(credentials: HTTPBasicCredentials):
-    correct_username = secrets.compare_digest(credentials.username, os.getenv("USERNAME"))
+    print(os.getenv("ACCOUNT"))
+    print(os.getenv("PASSWORD"))
+    correct_username = secrets.compare_digest(credentials.username, os.getenv("ACCOUNT"))
     correct_password = secrets.compare_digest(credentials.password, os.getenv("PASSWORD"))
     if not (correct_username and correct_password):
         raise HTTPException(
@@ -78,6 +78,7 @@ def _send_to_lozuka(data: json):
             },
             headers={"WWW-Authenticate": "Basic"},
         )
+    return response
 
 
 COLUMNS = [
