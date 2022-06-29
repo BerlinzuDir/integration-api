@@ -9,7 +9,7 @@ from fastapi import FastAPI
 from requests.auth import HTTPBasicAuth
 from starlette.testclient import TestClient
 from src.types import Route
-from .integrate_products import route
+from .integrate_products import route, COLUMNS
 
 USERNAME = "test"
 PASSWORD = "testpw"
@@ -40,7 +40,7 @@ def test_integrate_products_faulty_data_status_422():
     test_client = _setup()
     response = _post_test_csv_file(client=test_client, data=pd.DataFrame({"wrong": ["data"]}))
     assert response.status_code == 422
-    assert json.loads(response.content)["detail"] == "Invalid file structure"
+    assert (json.loads(response.content)["detail"] == f"Missing columns: {','.join([column for column in sorted(COLUMNS.keys())])}."
 
 
 def test_integrate_products_lozuka_api_error_response_status_502():
@@ -64,7 +64,7 @@ def _post_test_csv_file(
     auth: HTTPBasicAuth = HTTPBasicAuth(USERNAME, PASSWORD),
 ):
     filename = "test.csv"
-    data.to_csv(filename)
+    data.to_csv(filename, sep=";")
     f = open(filename, "r")
     try:
         response = client.post("/integrate_products/", auth=auth, files={"file": f})
@@ -97,7 +97,7 @@ def _mock_product_import_endpoint() -> None:
 
 @pytest.fixture
 def test_data() -> pd.DataFrame:
-    yield pd.read_csv("fixtures/products_testfile.csv", delimiter="\t")
+    yield pd.read_csv("fixtures/products_testfile.csv", sep=";")
 
 
 @pytest.fixture
