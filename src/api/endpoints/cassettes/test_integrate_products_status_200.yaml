@@ -9,14 +9,15 @@ interactions:
       "l", "baseMeasureQuantity": 1.0, "categories": "Erfrischungsgetr\u00e4nke",
       "images": "http://s914789466.online.de/bzd_bilder/Red Bull Energy Drink 250
       ml.jpg", "keywords": "Getr\u00e4nke, Erfischungsgetr\u00e4nke, Saft, Cola, Sirup,
-      alkoholfrei, Fanta, Sprite, Wasser, Energy Drink", "stock": 0.0, "ean": "nan"}'
+      alkoholfrei, Fanta, Sprite, Wasser, Energy Drink", "stock": 0.0, "ean": "nan",
+      "active": true}'
     headers:
       Accept-Encoding:
       - gzip, deflate
       Connection:
       - keep-alive
       Content-Length:
-      - '804'
+      - '820'
       Content-Type:
       - application/json
       User-Agent:
@@ -27,7 +28,7 @@ interactions:
     uri: https://api.lozuka-awiti.com/api/poa/products/import
   response:
     body:
-      string: '{"data":{"id":8470,"is_new":false,"message":"product_imported_successfully"}}'
+      string: '{"data":{"id":1688,"is_new":false,"message":"product_imported_successfully"}}'
     headers:
       cache-control:
       - no-cache, private
@@ -36,7 +37,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 20:37:02 GMT
+      - Wed, 29 Jun 2022 21:14:00 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -69,14 +70,15 @@ interactions:
       "l", "baseMeasureQuantity": 1.0, "categories": "Erfrischungsgetr\u00e4nke",
       "images": "http://s914789466.online.de/bzd_bilder/Mandarin Veneto 330 ml.jpg",
       "keywords": "Getr\u00e4nke, Erfischungsgetr\u00e4nke, Saft, Cola, Sirup, alkoholfrei,
-      Fanta, Sprite, Wasser, Energy Drink", "stock": 0.0, "ean": "nan"}'
+      Fanta, Sprite, Wasser, Energy Drink", "stock": 0.0, "ean": "nan", "active":
+      true}'
     headers:
       Accept-Encoding:
       - gzip, deflate
       Connection:
       - keep-alive
       Content-Length:
-      - '1032'
+      - '1048'
       Content-Type:
       - application/json
       User-Agent:
@@ -87,7 +89,7 @@ interactions:
     uri: https://api.lozuka-awiti.com/api/poa/products/import
   response:
     body:
-      string: '{"data":{"id":8471,"is_new":false,"message":"product_imported_successfully"}}'
+      string: '{"data":{"id":1689,"is_new":false,"message":"product_imported_successfully"}}'
     headers:
       cache-control:
       - no-cache, private
@@ -96,7 +98,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 20:37:03 GMT
+      - Wed, 29 Jun 2022 21:14:02 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -127,14 +129,15 @@ interactions:
       250.0, "baseMeasureUnit": "l", "baseMeasureQuantity": 1.0, "categories": "Erfrischungsgetr\u00e4nke",
       "images": "http://s914789466.online.de/bzd_bilder/Hot Blood Energy Drink 250
       ml.jpg", "keywords": "Getr\u00e4nke, Erfischungsgetr\u00e4nke, Saft, Cola, Sirup,
-      alkoholfrei, Fanta, Sprite, Wasser, Energy Drink", "stock": 0.0, "ean": "nan"}'
+      alkoholfrei, Fanta, Sprite, Wasser, Energy Drink", "stock": 0.0, "ean": "nan",
+      "active": true}'
     headers:
       Accept-Encoding:
       - gzip, deflate
       Connection:
       - keep-alive
       Content-Length:
-      - '919'
+      - '935'
       Content-Type:
       - application/json
       User-Agent:
@@ -145,7 +148,7 @@ interactions:
     uri: https://api.lozuka-awiti.com/api/poa/products/import
   response:
     body:
-      string: '{"data":{"id":8472,"is_new":false,"message":"product_imported_successfully"}}'
+      string: '{"data":{"id":1690,"is_new":false,"message":"product_imported_successfully"}}'
     headers:
       cache-control:
       - no-cache, private
@@ -154,7 +157,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 20:37:03 GMT
+      - Wed, 29 Jun 2022 21:14:03 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -186,14 +189,14 @@ interactions:
       "images": "http://s914789466.online.de/bzd_bilder/Peison Energy Drink 250 ml.jpg",
       "keywords": "Getr\u00e4nke, Erfischungsgetr\u00e4nke, Saft, Cola, Sirup, alkoholfrei,
       Fanta, Sprite, Wasser, Energy Drink, Malzgetr\u00e4nk, Eistee, Eiskaffee", "stock":
-      0.0, "ean": "nan"}'
+      0.0, "ean": "nan", "active": true}'
     headers:
       Accept-Encoding:
       - gzip, deflate
       Connection:
       - keep-alive
       Content-Length:
-      - '953'
+      - '969'
       Content-Type:
       - application/json
       User-Agent:
@@ -204,7 +207,7 @@ interactions:
     uri: https://api.lozuka-awiti.com/api/poa/products/import
   response:
     body:
-      string: '{"data":{"id":8473,"is_new":false,"message":"product_imported_successfully"}}'
+      string: '{"data":{"id":1691,"is_new":false,"message":"product_imported_successfully"}}'
     headers:
       cache-control:
       - no-cache, private
@@ -213,7 +216,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 20:37:06 GMT
+      - Wed, 29 Jun 2022 21:14:03 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -247,14 +250,14 @@ interactions:
       "images": "http://s914789466.online.de/bzd_bilder/Rockstar Energy Drink Freeze
       Wassermelone 500 ml.jpg", "keywords": "Getr\u00e4nke, Erfischungsgetr\u00e4nke,
       Saft, Cola, Sirup, alkoholfrei, Fanta, Sprite, Wasser, Energy Drink, Malzgetr\u00e4nk,
-      Eistee, Eiskaffee", "stock": 0.0, "ean": "nan"}'
+      Eistee, Eiskaffee", "stock": 0.0, "ean": "nan", "active": true}'
     headers:
       Accept-Encoding:
       - gzip, deflate
       Connection:
       - keep-alive
       Content-Length:
-      - '1099'
+      - '1115'
       Content-Type:
       - application/json
       User-Agent:
@@ -265,7 +268,7 @@ interactions:
     uri: https://api.lozuka-awiti.com/api/poa/products/import
   response:
     body:
-      string: '{"data":{"id":8469,"is_new":false,"message":"product_imported_successfully"}}'
+      string: '{"data":{"id":1692,"is_new":false,"message":"product_imported_successfully"}}'
     headers:
       cache-control:
       - no-cache, private
@@ -274,7 +277,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 20:37:07 GMT
+      - Wed, 29 Jun 2022 21:14:04 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -308,14 +311,14 @@ interactions:
       "images": "http://s914789466.online.de/bzd_bilder/Rockstar Energy Drink 500
       ml.jpg", "keywords": "Getr\u00e4nke, Erfischungsgetr\u00e4nke, Saft, Cola, Sirup,
       alkoholfrei, Fanta, Sprite, Wasser, Energy Drink, Malzgetr\u00e4nk, Eistee,
-      Eiskaffee", "stock": 0.0, "ean": "nan"}'
+      Eiskaffee", "stock": 0.0, "ean": "nan", "active": true}'
     headers:
       Accept-Encoding:
       - gzip, deflate
       Connection:
       - keep-alive
       Content-Length:
-      - '1059'
+      - '1075'
       Content-Type:
       - application/json
       User-Agent:
@@ -326,7 +329,7 @@ interactions:
     uri: https://api.lozuka-awiti.com/api/poa/products/import
   response:
     body:
-      string: '{"data":{"id":8474,"is_new":false,"message":"product_imported_successfully"}}'
+      string: '{"data":{"id":1693,"is_new":false,"message":"product_imported_successfully"}}'
     headers:
       cache-control:
       - no-cache, private
@@ -335,7 +338,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 20:37:07 GMT
+      - Wed, 29 Jun 2022 21:14:05 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -365,14 +368,14 @@ interactions:
       "images": "http://s914789466.online.de/bzd_bilder/Laziza Himbeere alkoholfreie
       330 ml.jpg", "keywords": "Getr\u00e4nke, Erfischungsgetr\u00e4nke, Saft, Cola,
       Sirup, alkoholfrei, Fanta, Sprite, Wasser, Energy Drink, Malzgetr\u00e4nk, Eistee,
-      Eiskaffee", "stock": 0.0, "ean": "nan"}'
+      Eiskaffee", "stock": 0.0, "ean": "nan", "active": true}'
     headers:
       Accept-Encoding:
       - gzip, deflate
       Connection:
       - keep-alive
       Content-Length:
-      - '809'
+      - '825'
       Content-Type:
       - application/json
       User-Agent:
@@ -383,7 +386,7 @@ interactions:
     uri: https://api.lozuka-awiti.com/api/poa/products/import
   response:
     body:
-      string: '{"data":{"id":8475,"is_new":false,"message":"product_imported_successfully"}}'
+      string: '{"data":{"id":1694,"is_new":false,"message":"product_imported_successfully"}}'
     headers:
       cache-control:
       - no-cache, private
@@ -392,7 +395,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 20:37:08 GMT
+      - Wed, 29 Jun 2022 21:14:06 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -422,14 +425,14 @@ interactions:
       1.0, "categories": "Erfrischungsgetr\u00e4nke", "images": "http://s914789466.online.de/bzd_bilder/Laziza
       Regular alkoholfreie 330 ml.jpg", "keywords": "Getr\u00e4nke, Erfischungsgetr\u00e4nke,
       Saft, Cola, Sirup, alkoholfrei, Fanta, Sprite, Wasser, Energy Drink, Malzgetr\u00e4nk,
-      Eistee, Eiskaffee", "stock": 0.0, "ean": "nan"}'
+      Eistee, Eiskaffee", "stock": 0.0, "ean": "nan", "active": true}'
     headers:
       Accept-Encoding:
       - gzip, deflate
       Connection:
       - keep-alive
       Content-Length:
-      - '816'
+      - '832'
       Content-Type:
       - application/json
       User-Agent:
@@ -440,7 +443,7 @@ interactions:
     uri: https://api.lozuka-awiti.com/api/poa/products/import
   response:
     body:
-      string: '{"data":{"id":8476,"is_new":false,"message":"product_imported_successfully"}}'
+      string: '{"data":{"id":1695,"is_new":false,"message":"product_imported_successfully"}}'
     headers:
       cache-control:
       - no-cache, private
@@ -449,7 +452,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 20:37:08 GMT
+      - Wed, 29 Jun 2022 21:14:07 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -481,14 +484,14 @@ interactions:
       "images": "http://s914789466.online.de/bzd_bilder/Barbican Malzgeschmack 330
       ml.jpg", "keywords": "Getr\u00e4nke, Erfischungsgetr\u00e4nke, Saft, Cola, Sirup,
       alkoholfrei, Fanta, Sprite, Wasser, Energy Drink, Malzgetr\u00e4nk, Eistee,
-      Eiskaffee", "stock": 0.0, "ean": "nan"}'
+      Eiskaffee", "stock": 0.0, "ean": "nan", "active": true}'
     headers:
       Accept-Encoding:
       - gzip, deflate
       Connection:
       - keep-alive
       Content-Length:
-      - '945'
+      - '961'
       Content-Type:
       - application/json
       User-Agent:
@@ -499,7 +502,7 @@ interactions:
     uri: https://api.lozuka-awiti.com/api/poa/products/import
   response:
     body:
-      string: '{"data":{"id":8477,"is_new":false,"message":"product_imported_successfully"}}'
+      string: '{"data":{"id":1696,"is_new":false,"message":"product_imported_successfully"}}'
     headers:
       cache-control:
       - no-cache, private
@@ -508,7 +511,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 20:37:09 GMT
+      - Wed, 29 Jun 2022 21:14:08 GMT
       referrer-policy:
       - same-origin
       set-cookie:

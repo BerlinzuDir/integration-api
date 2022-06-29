@@ -142,5 +142,6 @@ COLUMNS = {
     "keywords": str,
     "stock": float,
     "ean": str,
+    "active": bool,
 }
 route = Route(router=router, prefix="/integrate_products", tags=["Integrate Products"])
