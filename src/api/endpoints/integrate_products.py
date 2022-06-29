@@ -56,24 +56,24 @@ def _validate_data(data: pd.DataFrame):
         )
 
 
-COLUMNS = {
-    "shop": str,
-    "productNumber": str,
-    "name": str,
-    "description": str,
-    "priceBrutto": str,
-    "countryTax": str,
-    "priceNet": str,
-    "measureUnit": str,
-    "measureQuantity": str,
-    "basePriceUnit": str,
-    "basePriceQuantity": str,
-    "priceBase": str,
-    "category": str,
-    "image": str,
-    "keywords": str,
-    "stock": str,
-    "ean": str,
-    "brand": str,
-}
+COLUMNS = [
+    "shop",
+    "productNumber",
+    "name",
+    "description",
+    "priceBrutto",
+    "countryTax",
+    "priceNet",
+    "measureUnit",
+    "measureQuantity",
+    "basePriceUnit",
+    "basePriceQuantity",
+    "priceBase",
+    "category",
+    "image",
+    "keywords",
+    "stock",
+    "ean",
+    "brand",
+]
 route = Route(router=router, prefix="/integrate_products", tags=["Integrate Products"])

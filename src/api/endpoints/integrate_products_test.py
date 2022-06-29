@@ -42,7 +42,7 @@ def test_integrate_products_faulty_data_status_422():
     assert response.status_code == 422
     assert (
         json.loads(response.content)["detail"]
-        == f"Missing columns: {','.join([column for column in sorted(COLUMNS.keys())])}."
+        == f"Missing columns: {','.join([column for column in sorted(COLUMNS)])}."
     )
 
 
