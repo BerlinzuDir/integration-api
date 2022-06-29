@@ -47,10 +47,10 @@ def test_integrate_products_lozuka_api_error_response_status_502():
     test_client = _setup()
     response = _post_test_csv_file(client=test_client, data=pd.DataFrame({"wrong": ["data"]}))
     assert response.status_code == 502
-    assert (
-            json.loads(response.content)["detail"] ==
-            {"message": "Lozuka API request failed due to 'Access denied'", "status_code": 401}
-    )
+    assert json.loads(response.content)["detail"] == {
+        "message": "Lozuka API request failed due to 'Access denied'",
+        "status_code": 401,
+    }
 
 
 def _setup():
@@ -59,9 +59,9 @@ def _setup():
 
 
 def _post_test_csv_file(
-        client: TestClient,
-        data: pd.DataFrame,
-        auth: HTTPBasicAuth = HTTPBasicAuth(USERNAME, PASSWORD),
+    client: TestClient,
+    data: pd.DataFrame,
+    auth: HTTPBasicAuth = HTTPBasicAuth(USERNAME, PASSWORD),
 ):
     filename = "test.csv"
     data.to_csv(filename)
@@ -124,22 +124,9 @@ def request_body() -> Dict:
         "description": "string",
         "stock": 0,
         "keywords": "string",
-        "catalogs": [
-            1,
-            3,
-            5
-        ],
-        "categories": [
-            1,
-            3,
-            5
-        ],
-        "attributes": [
-            {
-                "name": "string",
-                "value": "string"
-            }
-        ],
+        "catalogs": [1, 3, 5],
+        "categories": [1, 3, 5],
+        "attributes": [{"name": "string", "value": "string"}],
         "images": "https://",
-        "force_images_update": True
+        "force_images_update": True,
     }
