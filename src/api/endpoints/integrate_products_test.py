@@ -25,7 +25,7 @@ def test_integrate_products_status_200(test_data):
     response = _post_test_csv_file(client=test_client, data=test_data)
     # TODO: check that Lozuka API is called with correct data
     assert response.status_code == 200
-    assert json.loads(response.content) == {'detail': {'failed': {'Almahaba Supermarkt': {}, 'Malandra': {}}}}
+    assert json.loads(response.content) == {"detail": {"failed": {"Almahaba Supermarkt": {}, "Malandra": {}}}}
 
 
 @pytest.mark.vcr()
@@ -46,7 +46,7 @@ def test_integrate_products_lozuka_api_authentification_error_response_status_20
                     "8": {"content": {"message": "Invalid credentials."}, "status_code": 401},
                     "9": {"content": {"message": "Invalid credentials."}, "status_code": 401},
                 },
-                "Malandra": {}
+                "Malandra": {},
             }
         }
     }
