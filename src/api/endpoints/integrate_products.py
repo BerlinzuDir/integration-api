@@ -89,7 +89,7 @@ def _structure_data(data: pd.DataFrame) -> Dict[str, List[Dict]]:
     shops = data["shop"].unique()
     structured_data = {}
     for shop in shops:
-        structured_data[shop] = [product for key, product in data.drop(columns=["shop"]).to_dict("index").items()]
+        structured_data[shop] = [product for key, product in data[data["shop"] == shop].drop(columns=["shop"]).to_dict("index").items()]
     return structured_data
 
 

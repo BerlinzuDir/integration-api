@@ -1,12 +1,12 @@
 interactions:
 - request:
-    body: '{"productNumber": "1", "name": "Red Bull Energy Drink 250 ml", "description":
-      "Herkunft: \u00d6sterreich. Zutaten: Wasser, Saccharose, Glucose, S\u00e4ureregulator
-      Natriumcitrate, Kohlens\u00e4ure, Taurin (0,4%), Glucuronolacton (0,24%), Koffein
-      (0,03%), Inosit, Vitamine (Niacin, Pantothens\u00e4ure, B6,B12), Aroma, Farbstoffe
-      (einfache Zuckerkul\u00f6r, Riboflavin).", "priceGross": 1.0, "countryTax":
-      7, "priceNet": 0.93, "measureUnit": "ml", "measureQuantity": 250.0, "baseMeasureUnit":
-      "l", "baseMeasureQuantity": 1.0, "categories": "Erfrischungsgetr\u00e4nke",
+    body: '{"Unnamed: 0": 0, "productNumber": "1", "name": "Red Bull Energy Drink
+      250 ml", "description": "Herkunft: \u00d6sterreich. Zutaten: Wasser, Saccharose,
+      Glucose, S\u00e4ureregulator Natriumcitrate, Kohlens\u00e4ure, Taurin (0,4%),
+      Glucuronolacton (0,24%), Koffein (0,03%), Inosit, Vitamine (Niacin, Pantothens\u00e4ure,
+      B6,B12), Aroma, Farbstoffe (einfache Zuckerkul\u00f6r, Riboflavin).", "priceGross":
+      1.0, "countryTax": 7, "priceNet": 0.93, "measureUnit": "ml", "measureQuantity":
+      250.0, "baseMeasureUnit": "l", "baseMeasureQuantity": 1.0, "categories": "Erfrischungsgetr\u00e4nke",
       "images": "http://s914789466.online.de/bzd_bilder/Red Bull Energy Drink 250
       ml.jpg", "keywords": "Getr\u00e4nke, Erfischungsgetr\u00e4nke, Saft, Cola, Sirup,
       alkoholfrei, Fanta, Sprite, Wasser, Energy Drink", "stock": 0.0, "ean": "nan",
@@ -17,7 +17,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '820'
+      - '837'
       Content-Type:
       - application/json
       User-Agent:
@@ -37,7 +37,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 21:14:00 GMT
+      - Wed, 29 Jun 2022 22:17:16 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -58,14 +58,14 @@ interactions:
       code: 200
       message: OK
 - request:
-    body: '{"productNumber": "2", "name": "Mandarin Veneto 330 ml", "description":
-      "Name: \u0645\u0646\u062f\u0631\u064a\u0646 \u0641\u064a\u0646\u062a\u0648 Herkunft:
-      T\u00fcrkei. Zutaten: Wasser, Fruktose, Glukose, sirup, Kohlendioxid, S\u00e4ureregulator
-      (ZitronenS\u00e4ure), Farbstoffe (schwarzes Karottensaftkonzentrat), Ammonium
-      -sulfite- karamell), Aromen, Konservierungsmittel ( Natriumbenzoat).  Tip: Nach
-      dem \u00d6ffnen gek\u00fchlt bei maximal 7\u00b0C f\u00fcr maximal 3 Tage in
-      einem geschlossenen Beh\u00e4lter aufbewahren. (Fleischerzeugnis nicht in der
-      ge\u00f6ffneten Konservendose aufbewahren).", "priceGross": 1.0, "countryTax":
+    body: '{"Unnamed: 0": 1, "productNumber": "2", "name": "Mandarin Veneto 330 ml",
+      "description": "Name: \u0645\u0646\u062f\u0631\u064a\u0646 \u0641\u064a\u0646\u062a\u0648
+      Herkunft: T\u00fcrkei. Zutaten: Wasser, Fruktose, Glukose, sirup, Kohlendioxid,
+      S\u00e4ureregulator (ZitronenS\u00e4ure), Farbstoffe (schwarzes Karottensaftkonzentrat),
+      Ammonium -sulfite- karamell), Aromen, Konservierungsmittel ( Natriumbenzoat).  Tip:
+      Nach dem \u00d6ffnen gek\u00fchlt bei maximal 7\u00b0C f\u00fcr maximal 3 Tage
+      in einem geschlossenen Beh\u00e4lter aufbewahren. (Fleischerzeugnis nicht in
+      der ge\u00f6ffneten Konservendose aufbewahren).", "priceGross": 1.0, "countryTax":
       7, "priceNet": 0.93, "measureUnit": "ml", "measureQuantity": 330.0, "baseMeasureUnit":
       "l", "baseMeasureQuantity": 1.0, "categories": "Erfrischungsgetr\u00e4nke",
       "images": "http://s914789466.online.de/bzd_bilder/Mandarin Veneto 330 ml.jpg",
@@ -78,7 +78,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '1048'
+      - '1065'
       Content-Type:
       - application/json
       User-Agent:
@@ -98,7 +98,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 21:14:02 GMT
+      - Wed, 29 Jun 2022 22:17:17 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -119,134 +119,16 @@ interactions:
       code: 200
       message: OK
 - request:
-    body: '{"productNumber": "3", "name": "Hot Blood Energy Drink 250 ml", "description":
-      "Herkunft: Deutschland. Zutaten: Wasser, Zucker, Dextrose, S\u00e4uerungsmittel:
-      Zitronens\u00e4ure, Kohlens\u00e4ure, Taurin (0,4%); S\u00e4ueregulatoren: Natriumcitrate,
-      Magnesiumcarbonate, Aroma, Koffein (0,024), Farbstoffe: Ammonsulfiz-Zuckerkul\u00f6r,
-      Riboflavine; Vitamine: Niacin, Pantothens\u00e4ure, VitaminB6, Vitamin B12;
-      Inosit (0,01%). Tip: Trocken und vor W\u00e4rme gesch\u00fctzt lagern.", "priceGross":
-      1.0, "countryTax": 7, "priceNet": 0.93, "measureUnit": "ml", "measureQuantity":
-      250.0, "baseMeasureUnit": "l", "baseMeasureQuantity": 1.0, "categories": "Erfrischungsgetr\u00e4nke",
-      "images": "http://s914789466.online.de/bzd_bilder/Hot Blood Energy Drink 250
-      ml.jpg", "keywords": "Getr\u00e4nke, Erfischungsgetr\u00e4nke, Saft, Cola, Sirup,
-      alkoholfrei, Fanta, Sprite, Wasser, Energy Drink", "stock": 0.0, "ean": "nan",
-      "active": true}'
-    headers:
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '935'
-      Content-Type:
-      - application/json
-      User-Agent:
-      - python-requests/2.28.0
-      accept:
-      - '*/*'
-    method: POST
-    uri: https://api.lozuka-awiti.com/api/poa/products/import
-  response:
-    body:
-      string: '{"data":{"id":1690,"is_new":false,"message":"product_imported_successfully"}}'
-    headers:
-      cache-control:
-      - no-cache, private
-      content-length:
-      - '77'
-      content-type:
-      - application/json
-      date:
-      - Wed, 29 Jun 2022 21:14:03 GMT
-      referrer-policy:
-      - same-origin
-      set-cookie:
-      - SERVERUSED=dsw01-lozuka-backend-v2; path=/
-      strict-transport-security:
-      - max-age=63072000
-      vary:
-      - Authorization
-      x-content-type-options:
-      - nosniff
-      x-frame-options:
-      - SAMEORIGIN
-      x-robots-tag:
-      - noindex
-      x-xss-protection:
-      - 1;mode=block
-    status:
-      code: 200
-      message: OK
-- request:
-    body: '{"productNumber": "4", "name": "Peison Energy Drink 250 ml", "description":
-      "Herkunft: T\u00fcrkei. Zutaten: Kohlens\u00e4urehaltiges Wasser, Zucker, S\u00e4ure
-      (Zitronens\u00e4ure), Koffein, Taurin, Glucuronolacton, Inositol, nat\u00fcrliche
-      Farbstoffe (Karamell E150c, Riboflavin E101), naturidentisches Rote-Beere-Aroma,
-      Konservierungsstoff (Natriumbonzoat, Kaliumsorbat), Niacin, Pamothens\u00e4ure,
-      Vitamin B6, Vitamin B12. Tip: Trocken und vor W\u00e4rme gesch\u00fctzt lagern.",
-      "priceGross": 1.0, "countryTax": 7, "priceNet": 0.93, "measureUnit": "ml", "measureQuantity":
-      250.0, "baseMeasureUnit": "l", "baseMeasureQuantity": 1.0, "categories": "Erfrischungsgetr\u00e4nke",
-      "images": "http://s914789466.online.de/bzd_bilder/Peison Energy Drink 250 ml.jpg",
-      "keywords": "Getr\u00e4nke, Erfischungsgetr\u00e4nke, Saft, Cola, Sirup, alkoholfrei,
-      Fanta, Sprite, Wasser, Energy Drink, Malzgetr\u00e4nk, Eistee, Eiskaffee", "stock":
-      0.0, "ean": "nan", "active": true}'
-    headers:
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '969'
-      Content-Type:
-      - application/json
-      User-Agent:
-      - python-requests/2.28.0
-      accept:
-      - '*/*'
-    method: POST
-    uri: https://api.lozuka-awiti.com/api/poa/products/import
-  response:
-    body:
-      string: '{"data":{"id":1691,"is_new":false,"message":"product_imported_successfully"}}'
-    headers:
-      cache-control:
-      - no-cache, private
-      content-length:
-      - '77'
-      content-type:
-      - application/json
-      date:
-      - Wed, 29 Jun 2022 21:14:03 GMT
-      referrer-policy:
-      - same-origin
-      set-cookie:
-      - SERVERUSED=dsw01-lozuka-backend-v2; path=/
-      strict-transport-security:
-      - max-age=63072000
-      vary:
-      - Authorization
-      x-content-type-options:
-      - nosniff
-      x-frame-options:
-      - SAMEORIGIN
-      x-robots-tag:
-      - noindex
-      x-xss-protection:
-      - 1;mode=block
-    status:
-      code: 200
-      message: OK
-- request:
-    body: '{"productNumber": "5", "name": "Rockstar Energy Drink Freeze Wassermelone
-      500 ml", "description": "Herkunft: Deutschland. Zutaten: Wasser, Zucker, Dextrose,
-      Kohlens\u00e4ure, S\u00e4uerungsmittel Citronens\u00e4ure, Taurin (0,4%), Aroma,
-      Koffein (0,032%), Stabilisatoren (Gummi arabicum, Glycerinester aus Wurzelharz),
-      Glucuronolacton (0,024%), modifizierte St\u00e4rke, Antioxidationsmittel Ascorbins\u00e4ure,
-      Ginseng-Aromaextrakt (0,01%), Guarana-Extrakt (0,01%), Inosit (0,01%), Niacin,
-      Pantothenat, Vitamin B6, Farbstoff Beta-Carotin, Vitamin B12. Tip: Trocken und
-      vor W\u00e4rme gesch\u00fctzt lagern.", "priceGross": 1.0, "countryTax": 7,
-      "priceNet": 0.93, "measureUnit": "ml", "measureQuantity": 500.0, "baseMeasureUnit":
-      "l", "baseMeasureQuantity": 1.0, "categories": "Erfrischungsgetr\u00e4nke",
+    body: '{"Unnamed: 0": 4, "productNumber": "5", "name": "Rockstar Energy Drink
+      Freeze Wassermelone 500 ml", "description": "Herkunft: Deutschland. Zutaten:
+      Wasser, Zucker, Dextrose, Kohlens\u00e4ure, S\u00e4uerungsmittel Citronens\u00e4ure,
+      Taurin (0,4%), Aroma, Koffein (0,032%), Stabilisatoren (Gummi arabicum, Glycerinester
+      aus Wurzelharz), Glucuronolacton (0,024%), modifizierte St\u00e4rke, Antioxidationsmittel
+      Ascorbins\u00e4ure, Ginseng-Aromaextrakt (0,01%), Guarana-Extrakt (0,01%), Inosit
+      (0,01%), Niacin, Pantothenat, Vitamin B6, Farbstoff Beta-Carotin, Vitamin B12.
+      Tip: Trocken und vor W\u00e4rme gesch\u00fctzt lagern.", "priceGross": 1.0,
+      "countryTax": 7, "priceNet": 0.93, "measureUnit": "ml", "measureQuantity": 500.0,
+      "baseMeasureUnit": "l", "baseMeasureQuantity": 1.0, "categories": "Erfrischungsgetr\u00e4nke",
       "images": "http://s914789466.online.de/bzd_bilder/Rockstar Energy Drink Freeze
       Wassermelone 500 ml.jpg", "keywords": "Getr\u00e4nke, Erfischungsgetr\u00e4nke,
       Saft, Cola, Sirup, alkoholfrei, Fanta, Sprite, Wasser, Energy Drink, Malzgetr\u00e4nk,
@@ -257,7 +139,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '1115'
+      - '1132'
       Content-Type:
       - application/json
       User-Agent:
@@ -277,7 +159,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 21:14:04 GMT
+      - Wed, 29 Jun 2022 22:17:17 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -298,11 +180,11 @@ interactions:
       code: 200
       message: OK
 - request:
-    body: '{"productNumber": "6", "name": "Rockstar Energy Drink 500 ml", "description":
-      "Herkunft: Deutschland. Zutaten: Wasser, Zucker, Dextrose, Kohlens\u00e4ure,
-      S\u00e4uerungsmittel Citronens\u00e4ure, Taurin (0,4%), Aroma, Koffein (0,032%),
-      Stabilisatoren (Gummi arabicum, Glycerinester aus Wurzelharz), Glucuronolacton
-      (0,024%), modifizierte St\u00e4rke, Antioxidationsmittel Ascorbins\u00e4ure,
+    body: '{"Unnamed: 0": 5, "productNumber": "6", "name": "Rockstar Energy Drink
+      500 ml", "description": "Herkunft: Deutschland. Zutaten: Wasser, Zucker, Dextrose,
+      Kohlens\u00e4ure, S\u00e4uerungsmittel Citronens\u00e4ure, Taurin (0,4%), Aroma,
+      Koffein (0,032%), Stabilisatoren (Gummi arabicum, Glycerinester aus Wurzelharz),
+      Glucuronolacton (0,024%), modifizierte St\u00e4rke, Antioxidationsmittel Ascorbins\u00e4ure,
       Ginseng-Aromaextrakt (0,01%), Guarana-Extrakt (0,01%), Inosit (0,01%), Niacin,
       Pantothenat, Vitamin B6, Farbstoff Beta-Carotin, Vitamin B12. Tip: Trocken und
       vor W\u00e4rme gesch\u00fctzt lagern.", "priceGross": 1.0, "countryTax": 7,
@@ -318,7 +200,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '1075'
+      - '1092'
       Content-Type:
       - application/json
       User-Agent:
@@ -338,7 +220,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 21:14:05 GMT
+      - Wed, 29 Jun 2022 22:17:18 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -359,23 +241,24 @@ interactions:
       code: 200
       message: OK
 - request:
-    body: '{"productNumber": "7", "name": "Laziza Himbeere alkoholfreie 330 ml", "description":
-      "Name: \u0634\u0631\u0627\u0628 \u0634\u0639\u064a\u0631 \u0628\u0646\u0643\u0647\u0629
-      \u0627\u0644\u062a\u0648\u062a Herkunft: Libanon. Zutaten: Wasser, Gerstenmalz,
-      Mais, Zucker, Zitronens\u00e4ure E330, Hopfen, naturidentisches Himbeeraroma.",
-      "priceGross": 1.0, "countryTax": 7, "priceNet": 0.93, "measureUnit": "ml", "measureQuantity":
-      330.0, "baseMeasureUnit": "l", "baseMeasureQuantity": 1.0, "categories": "Erfrischungsgetr\u00e4nke",
-      "images": "http://s914789466.online.de/bzd_bilder/Laziza Himbeere alkoholfreie
-      330 ml.jpg", "keywords": "Getr\u00e4nke, Erfischungsgetr\u00e4nke, Saft, Cola,
-      Sirup, alkoholfrei, Fanta, Sprite, Wasser, Energy Drink, Malzgetr\u00e4nk, Eistee,
-      Eiskaffee", "stock": 0.0, "ean": "nan", "active": true}'
+    body: '{"Unnamed: 0": 6, "productNumber": "7", "name": "Laziza Himbeere alkoholfreie
+      330 ml", "description": "Name: \u0634\u0631\u0627\u0628 \u0634\u0639\u064a\u0631
+      \u0628\u0646\u0643\u0647\u0629 \u0627\u0644\u062a\u0648\u062a Herkunft: Libanon.
+      Zutaten: Wasser, Gerstenmalz, Mais, Zucker, Zitronens\u00e4ure E330, Hopfen,
+      naturidentisches Himbeeraroma.", "priceGross": 1.0, "countryTax": 7, "priceNet":
+      0.93, "measureUnit": "ml", "measureQuantity": 330.0, "baseMeasureUnit": "l",
+      "baseMeasureQuantity": 1.0, "categories": "Erfrischungsgetr\u00e4nke", "images":
+      "http://s914789466.online.de/bzd_bilder/Laziza Himbeere alkoholfreie 330 ml.jpg",
+      "keywords": "Getr\u00e4nke, Erfischungsgetr\u00e4nke, Saft, Cola, Sirup, alkoholfrei,
+      Fanta, Sprite, Wasser, Energy Drink, Malzgetr\u00e4nk, Eistee, Eiskaffee", "stock":
+      0.0, "ean": "nan", "active": true}'
     headers:
       Accept-Encoding:
       - gzip, deflate
       Connection:
       - keep-alive
       Content-Length:
-      - '825'
+      - '842'
       Content-Type:
       - application/json
       User-Agent:
@@ -395,7 +278,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 21:14:06 GMT
+      - Wed, 29 Jun 2022 22:17:19 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -416,23 +299,24 @@ interactions:
       code: 200
       message: OK
 - request:
-    body: '{"productNumber": "8", "name": "Laziza Regular alkoholfreie 330 ml", "description":
-      "Name: \u0634\u0631\u0627\u0628 \u0634\u0639\u064a\u0631 \u0628\u0646\u0643\u0647\u0629
-      \u0627\u0644\u0637\u0628\u064a\u0639\u0629 Herkunft: Libanon. Zutaten: Wasser,
-      Gerstenmalz, Mais, Zucker, Zitronens\u00e4ure E330, Hopfen, naturidentisches
-      Malzaroma.", "priceGross": 1.0, "countryTax": 7, "priceNet": 0.93, "measureUnit":
-      "ml", "measureQuantity": 330.0, "baseMeasureUnit": "l", "baseMeasureQuantity":
-      1.0, "categories": "Erfrischungsgetr\u00e4nke", "images": "http://s914789466.online.de/bzd_bilder/Laziza
-      Regular alkoholfreie 330 ml.jpg", "keywords": "Getr\u00e4nke, Erfischungsgetr\u00e4nke,
-      Saft, Cola, Sirup, alkoholfrei, Fanta, Sprite, Wasser, Energy Drink, Malzgetr\u00e4nk,
-      Eistee, Eiskaffee", "stock": 0.0, "ean": "nan", "active": true}'
+    body: '{"Unnamed: 0": 7, "productNumber": "8", "name": "Laziza Regular alkoholfreie
+      330 ml", "description": "Name: \u0634\u0631\u0627\u0628 \u0634\u0639\u064a\u0631
+      \u0628\u0646\u0643\u0647\u0629 \u0627\u0644\u0637\u0628\u064a\u0639\u0629 Herkunft:
+      Libanon. Zutaten: Wasser, Gerstenmalz, Mais, Zucker, Zitronens\u00e4ure E330,
+      Hopfen, naturidentisches Malzaroma.", "priceGross": 1.0, "countryTax": 7, "priceNet":
+      0.93, "measureUnit": "ml", "measureQuantity": 330.0, "baseMeasureUnit": "l",
+      "baseMeasureQuantity": 1.0, "categories": "Erfrischungsgetr\u00e4nke", "images":
+      "http://s914789466.online.de/bzd_bilder/Laziza Regular alkoholfreie 330 ml.jpg",
+      "keywords": "Getr\u00e4nke, Erfischungsgetr\u00e4nke, Saft, Cola, Sirup, alkoholfrei,
+      Fanta, Sprite, Wasser, Energy Drink, Malzgetr\u00e4nk, Eistee, Eiskaffee", "stock":
+      0.0, "ean": "nan", "active": true}'
     headers:
       Accept-Encoding:
       - gzip, deflate
       Connection:
       - keep-alive
       Content-Length:
-      - '832'
+      - '849'
       Content-Type:
       - application/json
       User-Agent:
@@ -452,7 +336,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 21:14:07 GMT
+      - Wed, 29 Jun 2022 22:17:19 GMT
       referrer-policy:
       - same-origin
       set-cookie:
@@ -473,8 +357,8 @@ interactions:
       code: 200
       message: OK
 - request:
-    body: '{"productNumber": "9", "name": "Barbican Malzgeschmack 330 ml", "description":
-      "Name: \u0628\u0631\u0628\u064a\u0643\u0627\u0646 \u0628\u0646\u0643\u0647\u0629
+    body: '{"Unnamed: 0": 8, "productNumber": "9", "name": "Barbican Malzgeschmack
+      330 ml", "description": "Name: \u0628\u0631\u0628\u064a\u0643\u0627\u0646 \u0628\u0646\u0643\u0647\u0629
       \u0627\u0644\u0634\u0639\u064a\u0631 Herkunft:UAE. Zutaten: Wasser mit Kohlens\u00e4ure,
       Malzkonzentrat, Zucker, naturidentische Malz- und Hopfenaromen, Salz, S\u00e4uerungsmittel:
       E330, Antioxidationsmittel: E300, Hopfen enth\u00e4lt Gluten. Tip: f\u00fcr
@@ -491,7 +375,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '961'
+      - '978'
       Content-Type:
       - application/json
       User-Agent:
@@ -511,7 +395,125 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 29 Jun 2022 21:14:08 GMT
+      - Wed, 29 Jun 2022 22:17:20 GMT
+      referrer-policy:
+      - same-origin
+      set-cookie:
+      - SERVERUSED=dsw01-lozuka-backend-v2; path=/
+      strict-transport-security:
+      - max-age=63072000
+      vary:
+      - Authorization
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-robots-tag:
+      - noindex
+      x-xss-protection:
+      - 1;mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"Unnamed: 0": 2, "productNumber": "3", "name": "Hot Blood Energy Drink
+      250 ml", "description": "Herkunft: Deutschland. Zutaten: Wasser, Zucker, Dextrose,
+      S\u00e4uerungsmittel: Zitronens\u00e4ure, Kohlens\u00e4ure, Taurin (0,4%)  S\u00e4ueregulatoren:
+      Natriumcitrate, Magnesiumcarbonate, Aroma, Koffein (0,024), Farbstoffe: Ammonsulfiz-Zuckerkul\u00f6r,
+      Riboflavine Vitamine: Niacin, Pantothens\u00e4ure, VitaminB6, Vitamin B12  Inosit
+      (0,01%). Tip: Trocken und vor W\u00e4rme gesch\u00fctzt lagern.", "priceGross":
+      1.0, "countryTax": 7, "priceNet": 0.93, "measureUnit": "ml", "measureQuantity":
+      250.0, "baseMeasureUnit": "l", "baseMeasureQuantity": 1.0, "categories": "Erfrischungsgetr\u00e4nke",
+      "images": "http://s914789466.online.de/bzd_bilder/Hot Blood Energy Drink 250
+      ml.jpg", "keywords": "Getr\u00e4nke, Erfischungsgetr\u00e4nke, Saft, Cola, Sirup,
+      alkoholfrei, Fanta, Sprite, Wasser, Energy Drink", "stock": 0.0, "ean": "nan",
+      "active": true}'
+    headers:
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '951'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.28.0
+      accept:
+      - '*/*'
+    method: POST
+    uri: https://api.lozuka-awiti.com/api/poa/products/import
+  response:
+    body:
+      string: '{"data":{"id":1676,"is_new":false,"message":"product_imported_successfully"}}'
+    headers:
+      cache-control:
+      - no-cache, private
+      content-length:
+      - '77'
+      content-type:
+      - application/json
+      date:
+      - Wed, 29 Jun 2022 22:17:21 GMT
+      referrer-policy:
+      - same-origin
+      set-cookie:
+      - SERVERUSED=dsw01-lozuka-backend-v2; path=/
+      strict-transport-security:
+      - max-age=63072000
+      vary:
+      - Authorization
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-robots-tag:
+      - noindex
+      x-xss-protection:
+      - 1;mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"Unnamed: 0": 3, "productNumber": "4", "name": "Peison Energy Drink 250
+      ml", "description": "Herkunft: T\u00fcrkei. Zutaten: Kohlens\u00e4urehaltiges
+      Wasser, Zucker, S\u00e4ure (Zitronens\u00e4ure), Koffein, Taurin, Glucuronolacton,
+      Inositol, nat\u00fcrliche Farbstoffe (Karamell E150c, Riboflavin E101), naturidentisches
+      Rote-Beere-Aroma, Konservierungsstoff (Natriumbonzoat, Kaliumsorbat), Niacin,
+      Pamothens\u00e4ure, Vitamin B6, Vitamin B12. Tip: Trocken und vor W\u00e4rme
+      gesch\u00fctzt lagern.", "priceGross": 1.0, "countryTax": 7, "priceNet": 0.93,
+      "measureUnit": "ml", "measureQuantity": 250.0, "baseMeasureUnit": "l", "baseMeasureQuantity":
+      1.0, "categories": "Erfrischungsgetr\u00e4nke", "images": "http://s914789466.online.de/bzd_bilder/Peison
+      Energy Drink 250 ml.jpg", "keywords": "Getr\u00e4nke, Erfischungsgetr\u00e4nke,
+      Saft, Cola, Sirup, alkoholfrei, Fanta, Sprite, Wasser, Energy Drink, Malzgetr\u00e4nk,
+      Eistee, Eiskaffee", "stock": 0.0, "ean": "nan", "active": true}'
+    headers:
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '986'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.28.0
+      accept:
+      - '*/*'
+    method: POST
+    uri: https://api.lozuka-awiti.com/api/poa/products/import
+  response:
+    body:
+      string: '{"data":{"id":1677,"is_new":false,"message":"product_imported_successfully"}}'
+    headers:
+      cache-control:
+      - no-cache, private
+      content-length:
+      - '77'
+      content-type:
+      - application/json
+      date:
+      - Wed, 29 Jun 2022 22:17:21 GMT
       referrer-policy:
       - same-origin
       set-cookie:
