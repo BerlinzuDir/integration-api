@@ -16,6 +16,7 @@ PASSWORD = "testpw"
 def test_integrate_products_status_200(test_data):
     test_client = _setup()
     res = _post_test_csv_file(client=test_client, data=test_data)
+    # TODO: check that Lozuka API is called with status 200
     assert res.status_code == 200
 
 
@@ -31,6 +32,13 @@ def test_integrate_products_faulty_data_status_422():
     response = _post_test_csv_file(client=test_client, data=pd.DataFrame({"wrong": ["data"]}))
     assert response.status_code == 422
     assert json.loads(response.content)["detail"] == "Invalid file structure"
+
+
+def test_integrate_products_lozuka_api_error_response_status_502():
+    test_client = _setup()
+    response = _post_test_csv_file(client=test_client, data=pd.DataFrame({"wrong": ["data"]}))
+    assert response.status_code == 502
+    assert json.loads(response.content)["detail"] == {"message": "Lozuka API request failed", "status_code": 422}
 
 
 def _setup():
