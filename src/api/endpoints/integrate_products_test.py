@@ -77,11 +77,6 @@ def _post_test_csv_file(
     return response
 
 
-def _set_env_variables(**kwargs):
-    for key, value in kwargs.items():
-        os.environ[key.upper()] = value
-
-
 @pytest.fixture
 def test_data() -> pd.DataFrame:
     yield pd.read_csv("fixtures/products_testfile.csv", sep=";")
