@@ -40,11 +40,11 @@ def test_integrate_products_lozuka_api_authentification_error_response_status_20
                 "Almahaba Supermarkt": {
                     "1": {"content": {"message": "Invalid credentials."}, "status_code": 401},
                     "2": {"content": {"message": "Invalid credentials."}, "status_code": 401},
+                    "3": {"content": {"message": "Invalid credentials."}, "status_code": 401},
+                    "4": {"content": {"message": "Invalid credentials."}, "status_code": 401},
                     "5": {"content": {"message": "Invalid credentials."}, "status_code": 401},
                     "6": {"content": {"message": "Invalid credentials."}, "status_code": 401},
                     "7": {"content": {"message": "Invalid credentials."}, "status_code": 401},
-                    "8": {"content": {"message": "Invalid credentials."}, "status_code": 401},
-                    "9": {"content": {"message": "Invalid credentials."}, "status_code": 401},
                 },
                 "Malandra": {},
             }

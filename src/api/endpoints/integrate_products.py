@@ -145,5 +145,6 @@ COLUMNS = {
     "stock": float,
     "ean": str,
     "active": bool,
+    "force_images_update": bool,
 }
 route = Route(router=router, prefix="/integrate_products", tags=["Integrate Products"])
