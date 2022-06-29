@@ -1,43 +1,37 @@
 import json
 import os
 from typing import Dict
-
+from dotenv import load_dotenv
 import pandas as pd
 import pytest
-import responses
 from fastapi import FastAPI
 from requests.auth import HTTPBasicAuth
 from starlette.testclient import TestClient
-from src.types import Route
 from .integrate_products import route, COLUMNS
 
-USERNAME = "test"
-PASSWORD = "testpw"
-LOZUKA_API_URL = "https://test_api.com/"
+
+load_dotenv("fixtures/test.env")
+app = FastAPI()
+app.include_router(**route)
+test_client = TestClient(app)
 
 
-@responses.activate
-def test_integrate_products_status_200(test_data, request_body):
-    test_client = _setup()
-    _mock_product_import_endpoint()
-
+def test_integrate_products_status_200(test_data):
     response = _post_test_csv_file(client=test_client, data=test_data)
     # TODO: check that Lozuka API is called with correct data
-    assert len(responses.calls) == 1
-    assert responses.calls[0].request.body == request_body
     assert response.status_code == 200
     assert json.loads(response.content)["detail"] == "Products added successfully"
 
 
+@pytest.mark.vcr()
 def test_integrate_products_authentification_status_401(test_data):
-    test_client = _setup()
     response = _post_test_csv_file(client=test_client, data=test_data, auth=HTTPBasicAuth("falsche", "credentials"))
     assert response.status_code == 401
     assert json.loads(response.content)["detail"] == "Incorrect username or password"
 
 
+@pytest.mark.vcr()
 def test_integrate_products_missing_columns_status_422():
-    test_client = _setup()
     response = _post_test_csv_file(client=test_client, data=pd.DataFrame({"wrong": ["data"]}))
     assert response.status_code == 422
     assert (
@@ -46,25 +40,31 @@ def test_integrate_products_missing_columns_status_422():
     )
 
 
-def test_integrate_products_lozuka_api_error_response_status_502():
-    test_client = _setup()
-    response = _post_test_csv_file(client=test_client, data=pd.DataFrame({"wrong": ["data"]}))
+@pytest.mark.vcr()
+def test_integrate_products_lozuka_api_client_error_response_status_502(test_data):
+    response = _post_test_csv_file(client=test_client, data=test_data)
     assert response.status_code == 502
     assert json.loads(response.content)["detail"] == {
-        "message": "Lozuka API request failed due to 'Access denied'",
-        "status_code": 401,
+        "message": "Lozuka API request failed due to '{'type': 'errors', 'data': [{'field': 'priceGross', 'message': "
+                   "'priceGross_is_required'}]}'",
+        "status_code": 400,
     }
 
 
-def _setup():
-    _set_env_variables(username=USERNAME, password=PASSWORD, lozuka_api_url=LOZUKA_API_URL)
-    return _create_test_client(route)
+@pytest.mark.vcr()
+def test_integrate_products_lozuka_api_authentification_error_response_status_502(test_data):
+    response = _post_test_csv_file(client=test_client, data=test_data)
+    assert response.status_code == 502
+    assert json.loads(response.content)["detail"] == {
+        "message": "Lozuka API request failed due to '{'message': 'Invalid credentials.'}'",
+        "status_code": 401,
+    }
 
 
 def _post_test_csv_file(
     client: TestClient,
     data: pd.DataFrame,
-    auth: HTTPBasicAuth = HTTPBasicAuth(USERNAME, PASSWORD),
+    auth: HTTPBasicAuth = HTTPBasicAuth(os.getenv("USERNAME"), os.getenv("PASSWORD")),
 ):
     filename = "test.csv"
     data.to_csv(filename, sep=";")
@@ -80,22 +80,6 @@ def _post_test_csv_file(
 def _set_env_variables(**kwargs):
     for key, value in kwargs.items():
         os.environ[key.upper()] = value
-
-
-def _create_test_client(route: Route):
-    app = FastAPI()
-    app.include_router(**route)
-    return TestClient(app)
-
-
-def _mock_product_import_endpoint() -> None:
-    responses.add(
-        responses.POST,
-        os.getenv("LOZUKA_API_URL"),
-        match_querystring=True,
-        body="",
-        status=200,
-    )
 
 
 @pytest.fixture

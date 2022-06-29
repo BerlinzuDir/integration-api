@@ -1,0 +1,121 @@
+interactions:
+- request:
+    body: '{"shop":{"0":"Almahaba Supermarkt","1":"Almahaba Supermarkt","2":"Almahaba
+      Supermarkt","3":"Almahaba Supermarkt","4":"Almahaba Supermarkt","5":"Almahaba
+      Supermarkt","6":"Almahaba Supermarkt","7":"Almahaba Supermarkt","8":"Almahaba
+      Supermarkt"},"productNumber":{"0":1,"1":2,"2":3,"3":4,"4":5,"5":6,"6":7,"7":8,"8":9},"name":{"0":"Red
+      Bull Energy Drink 250 ml","1":"Mandarin Veneto 330 ml","2":"Hot Blood Energy
+      Drink 250 ml","3":"Peison Energy Drink 250 ml","4":"Rockstar Energy Drink Freeze
+      Wassermelone 500 ml","5":"Rockstar Energy Drink 500 ml","6":"Laziza Himbeere
+      alkoholfreie 330 ml","7":"Laziza Regular alkoholfreie 330 ml","8":"Barbican
+      Malzgeschmack 330 ml"},"description":{"0":"Herkunft: \u00d6sterreich. Zutaten:
+      Wasser, Saccharose, Glucose, S\u00e4ureregulator Natriumcitrate, Kohlens\u00e4ure,
+      Taurin (0,4%), Glucuronolacton (0,24%), Koffein (0,03%), Inosit, Vitamine (Niacin,
+      Pantothens\u00e4ure, B6,B12), Aroma, Farbstoffe (einfache Zuckerkul\u00f6r,
+      Riboflavin).","1":"Name: \u0645\u0646\u062f\u0631\u064a\u0646 \u0641\u064a\u0646\u062a\u0648
+      Herkunft: T\u00fcrkei. Zutaten: Wasser, Fruktose, Glukose, sirup, Kohlendioxid,
+      S\u00e4ureregulator (ZitronenS\u00e4ure), Farbstoffe (schwarzes Karottensaftkonzentrat),
+      Ammonium -sulfite- karamell), Aromen, Konservierungsmittel ( Natriumbenzoat).  Tip:
+      Nach dem \u00d6ffnen gek\u00fchlt bei maximal 7\u00b0C f\u00fcr maximal 3 Tage
+      in einem geschlossenen Beh\u00e4lter aufbewahren. (Fleischerzeugnis nicht in
+      der ge\u00f6ffneten Konservendose aufbewahren).","2":"Herkunft: Deutschland.
+      Zutaten: Wasser, Zucker, Dextrose, S\u00e4uerungsmittel: Zitronens\u00e4ure,
+      Kohlens\u00e4ure, Taurin (0,4%); S\u00e4ueregulatoren: Natriumcitrate, Magnesiumcarbonate,
+      Aroma, Koffein (0,024), Farbstoffe: Ammonsulfiz-Zuckerkul\u00f6r, Riboflavine;
+      Vitamine: Niacin, Pantothens\u00e4ure, VitaminB6, Vitamin B12; Inosit (0,01%).
+      Tip: Trocken und vor W\u00e4rme gesch\u00fctzt lagern.","3":"Herkunft: T\u00fcrkei.
+      Zutaten: Kohlens\u00e4urehaltiges Wasser, Zucker, S\u00e4ure (Zitronens\u00e4ure),
+      Koffein, Taurin, Glucuronolacton, Inositol, nat\u00fcrliche Farbstoffe (Karamell
+      E150c, Riboflavin E101), naturidentisches Rote-Beere-Aroma, Konservierungsstoff
+      (Natriumbonzoat, Kaliumsorbat), Niacin, Pamothens\u00e4ure, Vitamin B6, Vitamin
+      B12. Tip: Trocken und vor W\u00e4rme gesch\u00fctzt lagern.","4":"Herkunft:
+      Deutschland. Zutaten: Wasser, Zucker, Dextrose, Kohlens\u00e4ure, S\u00e4uerungsmittel
+      Citronens\u00e4ure, Taurin (0,4%), Aroma, Koffein (0,032%), Stabilisatoren (Gummi
+      arabicum, Glycerinester aus Wurzelharz), Glucuronolacton (0,024%), modifizierte
+      St\u00e4rke, Antioxidationsmittel Ascorbins\u00e4ure, Ginseng-Aromaextrakt (0,01%),
+      Guarana-Extrakt (0,01%), Inosit (0,01%), Niacin, Pantothenat, Vitamin B6, Farbstoff
+      Beta-Carotin, Vitamin B12. Tip: Trocken und vor W\u00e4rme gesch\u00fctzt lagern.","5":"Herkunft:
+      Deutschland. Zutaten: Wasser, Zucker, Dextrose, Kohlens\u00e4ure, S\u00e4uerungsmittel
+      Citronens\u00e4ure, Taurin (0,4%), Aroma, Koffein (0,032%), Stabilisatoren (Gummi
+      arabicum, Glycerinester aus Wurzelharz), Glucuronolacton (0,024%), modifizierte
+      St\u00e4rke, Antioxidationsmittel Ascorbins\u00e4ure, Ginseng-Aromaextrakt (0,01%),
+      Guarana-Extrakt (0,01%), Inosit (0,01%), Niacin, Pantothenat, Vitamin B6, Farbstoff
+      Beta-Carotin, Vitamin B12. Tip: Trocken und vor W\u00e4rme gesch\u00fctzt lagern.","6":"Name:
+      \u0634\u0631\u0627\u0628 \u0634\u0639\u064a\u0631 \u0628\u0646\u0643\u0647\u0629
+      \u0627\u0644\u062a\u0648\u062a Herkunft: Libanon. Zutaten: Wasser, Gerstenmalz,
+      Mais, Zucker, Zitronens\u00e4ure E330, Hopfen, naturidentisches Himbeeraroma.","7":"Name:
+      \u0634\u0631\u0627\u0628 \u0634\u0639\u064a\u0631 \u0628\u0646\u0643\u0647\u0629
+      \u0627\u0644\u0637\u0628\u064a\u0639\u0629 Herkunft: Libanon. Zutaten: Wasser,
+      Gerstenmalz, Mais, Zucker, Zitronens\u00e4ure E330, Hopfen, naturidentisches
+      Malzaroma.","8":"Name: \u0628\u0631\u0628\u064a\u0643\u0627\u0646 \u0628\u0646\u0643\u0647\u0629
+      \u0627\u0644\u0634\u0639\u064a\u0631 Herkunft:UAE. Zutaten: Wasser mit Kohlens\u00e4ure,
+      Malzkonzentrat, Zucker, naturidentische Malz- und Hopfenaromen, Salz, S\u00e4uerungsmittel:
+      E330, Antioxidationsmittel: E300, Hopfen enth\u00e4lt Gluten. Tip: f\u00fcr
+      l\u00e4ngere Haltbarkeit, K\u00fchl und Trocken lagern."},"priceBrutto":{"0":1.0,"1":1.0,"2":1.0,"3":1.0,"4":1.0,"5":1.0,"6":1.0,"7":1.0,"8":1.0},"countryTax":{"0":7,"1":7,"2":7,"3":7,"4":7,"5":7,"6":7,"7":7,"8":7},"priceNet":{"0":0.93,"1":0.93,"2":0.93,"3":0.93,"4":0.93,"5":0.93,"6":0.93,"7":0.93,"8":0.93},"measureUnit":{"0":"ml","1":"ml","2":"ml","3":"ml","4":"ml","5":"ml","6":"ml","7":"ml","8":"ml"},"measureQuantity":{"0":250,"1":330,"2":250,"3":250,"4":500,"5":500,"6":330,"7":330,"8":330},"basePriceUnit":{"0":"l","1":"l","2":"l","3":"l","4":"l","5":"l","6":"l","7":"l","8":"l"},"basePriceQuantity":{"0":1,"1":1,"2":1,"3":1,"4":1,"5":1,"6":1,"7":1,"8":1},"priceBase":{"0":null,"1":null,"2":null,"3":null,"4":null,"5":null,"6":null,"7":null,"8":null},"category":{"0":"Erfrischungsgetr\u00e4nke","1":"Erfrischungsgetr\u00e4nke","2":"Erfrischungsgetr\u00e4nke","3":"Erfrischungsgetr\u00e4nke","4":"Erfrischungsgetr\u00e4nke","5":"Erfrischungsgetr\u00e4nke","6":"Erfrischungsgetr\u00e4nke","7":"Erfrischungsgetr\u00e4nke","8":"Erfrischungsgetr\u00e4nke"},"image":{"0":"http:\/\/s914789466.online.de\/Red+Bull+Energy+Drink+250+ml.jpg","1":"http:\/\/s914789466.online.de\/Mandarin+Veneto+330+ml.jpg","2":"http:\/\/s914789466.online.de\/Hot+Blood+Energy+Drink+250+ml.jpg","3":"http:\/\/s914789466.online.de\/Peison+Energy+Drink+250+ml.jpg","4":"http:\/\/s914789466.online.de\/Rockstar+Energy+Drink+Freeze+Wassermelone+500+ml.jpg","5":"http:\/\/s914789466.online.de\/Rockstar+Energy+Drink+500+ml.jpg","6":"http:\/\/s914789466.online.de\/Laziza+Himbeere+alkoholfreie+330+ml.jpg","7":"http:\/\/s914789466.online.de\/Laziza+Regular+alkoholfreie+330+ml.jpg","8":"http:\/\/s914789466.online.de\/Barbican+Malzgeschmack+330+ml.jpg"},"keywords":{"0":"Getr\u00e4nke,
+      Erfischungsgetr\u00e4nke, Saft, Cola, Sirup, alkoholfrei, Fanta, Sprite, Wasser,
+      Energy Drink","1":"Getr\u00e4nke, Erfischungsgetr\u00e4nke, Saft, Cola, Sirup,
+      alkoholfrei, Fanta, Sprite, Wasser, Energy Drink","2":"Getr\u00e4nke, Erfischungsgetr\u00e4nke,
+      Saft, Cola, Sirup, alkoholfrei, Fanta, Sprite, Wasser, Energy Drink","3":"Getr\u00e4nke,
+      Erfischungsgetr\u00e4nke, Saft, Cola, Sirup, alkoholfrei, Fanta, Sprite, Wasser,
+      Energy Drink, Malzgetr\u00e4nk, Eistee, Eiskaffee","4":"Getr\u00e4nke, Erfischungsgetr\u00e4nke,
+      Saft, Cola, Sirup, alkoholfrei, Fanta, Sprite, Wasser, Energy Drink, Malzgetr\u00e4nk,
+      Eistee, Eiskaffee","5":"Getr\u00e4nke, Erfischungsgetr\u00e4nke, Saft, Cola,
+      Sirup, alkoholfrei, Fanta, Sprite, Wasser, Energy Drink, Malzgetr\u00e4nk, Eistee,
+      Eiskaffee","6":"Getr\u00e4nke, Erfischungsgetr\u00e4nke, Saft, Cola, Sirup,
+      alkoholfrei, Fanta, Sprite, Wasser, Energy Drink, Malzgetr\u00e4nk, Eistee,
+      Eiskaffee","7":"Getr\u00e4nke, Erfischungsgetr\u00e4nke, Saft, Cola, Sirup,
+      alkoholfrei, Fanta, Sprite, Wasser, Energy Drink, Malzgetr\u00e4nk, Eistee,
+      Eiskaffee","8":"Getr\u00e4nke, Erfischungsgetr\u00e4nke, Saft, Cola, Sirup,
+      alkoholfrei, Fanta, Sprite, Wasser, Energy Drink, Malzgetr\u00e4nk, Eistee,
+      Eiskaffee"},"stock":{"0":null,"1":null,"2":null,"3":null,"4":null,"5":null,"6":null,"7":null,"8":null},"ean":{"0":null,"1":null,"2":null,"3":null,"4":null,"5":null,"6":null,"7":null,"8":null},"brand":{"0":null,"1":null,"2":null,"3":null,"4":null,"5":null,"6":null,"7":null,"8":null}}'
+    headers:
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - ApiKey 1234
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '7490'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.28.0
+      X-Account:
+      - '12345'
+      accept:
+      - '*/*'
+    method: POST
+    uri: https://api.lozuka-awiti.com/api/poa/products/import
+  response:
+    body:
+      string: '{"message":"Invalid credentials."}'
+    headers:
+      cache-control:
+      - no-cache, private
+      content-length:
+      - '34'
+      content-type:
+      - application/json
+      date:
+      - Wed, 29 Jun 2022 11:43:16 GMT
+      referrer-policy:
+      - same-origin
+      set-cookie:
+      - SERVERUSED=dsw01-lozuka-backend-v2; path=/
+      strict-transport-security:
+      - max-age=63072000
+      vary:
+      - Authorization
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-robots-tag:
+      - noindex
+      x-xss-protection:
+      - 1;mode=block
+    status:
+      code: 401
+      message: Unauthorized
+version: 1
