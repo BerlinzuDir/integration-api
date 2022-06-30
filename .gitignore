@@ -6,4 +6,4 @@ __pycache__
 src/requirements.txt
 artifact.zip
 
-production.env
+credentials.env

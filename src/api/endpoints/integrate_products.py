@@ -10,16 +10,15 @@ from fastapi import APIRouter, Depends, HTTPException, status, UploadFile
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 
 from dotenv import load_dotenv
-
 from src.types import Route
 
 router = APIRouter()
 security = HTTPBasic()
-load_dotenv("production.env")
+load_dotenv("credentials.env")
 
 
 @router.post("/")
-async def integrate_products(file: UploadFile, credentials: HTTPBasicCredentials = Depends(security)):
+def integrate_products(file: UploadFile, credentials: HTTPBasicCredentials = Depends(security)):
     _validate_credentials(credentials)
     data = _to_dataframe(file)
     data = _validate_data(data)
