@@ -14,11 +14,11 @@ from src.types import Route
 
 router = APIRouter()
 security = HTTPBasic()
-load_dotenv("credentials.env")
 
 
 @router.post("/")
 def integrate_products(file: UploadFile, credentials: HTTPBasicCredentials = Depends(security)):
+    load_dotenv("credentials.env")
     _validate_credentials(credentials)
     data = _to_dataframe(file)
     data = _validate_data(data)
