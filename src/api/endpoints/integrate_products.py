@@ -23,6 +23,8 @@ def integrate_products(file: UploadFile, credentials: HTTPBasicCredentials = Dep
     data = _to_dataframe(file)
     data = _validate_data(data)
     data = _set_types(data)
+    data = _update_column_names(data)
+    data = _set_categories_as_list(data)
     data = _fill_nan_values(data)
     data = _structure_data(data)
     failed_requests = _send_data(data)
@@ -32,6 +34,18 @@ def integrate_products(file: UploadFile, credentials: HTTPBasicCredentials = Dep
         }
     }
 
+COLUMN_MAPPING = {'description': 'longDescription'}
+
+
+def _update_column_names(data: pd.DataFrame) -> pd.DataFrame:
+    for column, new_name in COLUMN_MAPPING.items():
+        data.rename(columns={column: new_name}, inplace=True)
+    return data
+
+
+def _set_categories_as_list(data: pd.DataFrame) -> pd.DataFrame:
+    data["categories"] = data["categories"].apply(lambda x: [x])
+    return data
 
 def _validate_credentials(credentials: HTTPBasicCredentials):
     correct_username = secrets.compare_digest(credentials.username, os.getenv("ACCOUNT"))

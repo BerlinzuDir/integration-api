@@ -7,7 +7,7 @@ from fastapi import FastAPI
 from requests.auth import HTTPBasicAuth
 from starlette.testclient import TestClient
 
-from .integrate_products import route, COLUMNS
+from .integrate_products import route, COLUMNS, _set_categories_as_list
 
 load_dotenv("fixtures/test.env")
 app = FastAPI()
@@ -82,6 +82,11 @@ def _post_test_csv_file(
         os.remove(filename)
     return response
 
+
+def test_set_category_as_list_converts_category_column_to_list():
+    data = pd.DataFrame({"categories": ["1", "2", "3"]})
+    data = _set_categories_as_list(data)
+    assert all([a == b for a, b in zip(data.categories.values, [["1"], ["2"], ["3"]])])
 
 @pytest.fixture
 def test_data() -> pd.DataFrame:

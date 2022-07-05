@@ -10,6 +10,7 @@ Resources:
       CodeUri: src/
       Handler: main.handler
       Runtime: python3.8
+      Timeout: 900
       Events:
         Root:
           Type: Api

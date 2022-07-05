@@ -8,6 +8,7 @@ bundle:
 	poetry export -f requirements.txt --without-hashes --output src/requirements.txt
 	sam build
 	cp -r src .aws-sam/build/AppFunction
+	cp -r credentials.env .aws-sam/build/AppFunction
 	cd .aws-sam/build/AppFunction ; zip -r ../../../artifact.zip . -x '*.pyc' -x '*_test.py'
 
 deploy:
