@@ -7,7 +7,7 @@ from fastapi import FastAPI
 from requests.auth import HTTPBasicAuth
 from starlette.testclient import TestClient
 
-from .integrate_products import route, COLUMNS, _set_categories_as_list
+from .integrate_products import route, COLUMNS, _set_categories_as_list, _structure_data
 
 load_dotenv("fixtures/test.env")
 app = FastAPI()
@@ -38,6 +38,7 @@ def test_integrate_products_lozuka_api_authentification_error_response_status_20
     response = _post_test_csv_file(client=test_client, data=test_data)
     assert response.status_code == 200
     assert json.loads(response.content)["detail"]["failed"]["Almahaba Supermarkt"] == [
+        {"content": '{"message":"Invalid credentials."}', "status_code": 401},
         {"content": '{"message":"Invalid credentials."}', "status_code": 401},
         {"content": '{"message":"Invalid credentials."}', "status_code": 401},
         {"content": '{"message":"Invalid credentials."}', "status_code": 401},
@@ -83,6 +84,12 @@ def test_set_category_as_list_converts_category_column_to_list():
     data = pd.DataFrame({"categories": ["1", "2", "3"]})
     data = _set_categories_as_list(data)
     assert all([a == b for a, b in zip(data.categories.values, [["1"], ["2"], ["3"]])])
+
+
+def test_structure_data_returns_categories_as_list():
+    data = pd.DataFrame({"categories": ["1", "2", "3"], 'shop': 3*['Almahaba Supermarkt']})
+    data = _structure_data(data)
+    assert all([a['categories'] == b for a, b in zip(data['Almahaba Supermarkt'], ["1", "2", "3"])])
 
 
 @pytest.fixture
