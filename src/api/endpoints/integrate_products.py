@@ -4,7 +4,8 @@ import os
 from typing import Dict, List
 
 import pandas as pd
-import requests
+from aiohttp import ClientSession
+from asyncio import gather
 
 from fastapi import APIRouter, Depends, HTTPException, status, UploadFile
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
@@ -17,7 +18,7 @@ security = HTTPBasic()
 
 
 @router.post("/")
-def integrate_products(file: UploadFile, credentials: HTTPBasicCredentials = Depends(security)):
+async def integrate_products(file: UploadFile, credentials: HTTPBasicCredentials = Depends(security)):
     load_dotenv("credentials.env")
     _validate_credentials(credentials)
     data = _to_dataframe(file)
@@ -27,14 +28,15 @@ def integrate_products(file: UploadFile, credentials: HTTPBasicCredentials = Dep
     data = _set_categories_as_list(data)
     data = _fill_nan_values(data)
     data = _structure_data(data)
-    failed_requests = _send_data(data)
+    failed_requests = await _send_data(data)
     return {
         "detail": {
             "failed": failed_requests,
         }
     }
 
-COLUMN_MAPPING = {'description': 'longDescription'}
+
+COLUMN_MAPPING = {"description": "longDescription"}
 
 
 def _update_column_names(data: pd.DataFrame) -> pd.DataFrame:
@@ -46,6 +48,7 @@ def _update_column_names(data: pd.DataFrame) -> pd.DataFrame:
 def _set_categories_as_list(data: pd.DataFrame) -> pd.DataFrame:
     data["categories"] = data["categories"].apply(lambda x: [x])
     return data
+
 
 def _validate_credentials(credentials: HTTPBasicCredentials):
     correct_username = secrets.compare_digest(credentials.username, os.getenv("ACCOUNT"))
@@ -108,36 +111,49 @@ def _structure_data(data: pd.DataFrame) -> Dict[str, List[Dict]]:
     return structured_data
 
 
-def _send_data(data: Dict[str, List[Dict]]) -> Dict:
+async def _send_data(data: Dict[str, List[Dict]]) -> Dict:
     failed_requests = {}
+
     for shop_name, shop_products in data.items():
-        failed_requests[shop_name] = _send_shop_products(shop=shop_name, products=shop_products)
+        async with ClientSession(headers=_get_auth_header(shop_name)) as session:
+            failed_requests[shop_name] = await _send_shop_products(session, shop_name, shop_products)
     return failed_requests
 
 
-def _send_shop_products(shop: str, products: List[Dict]) -> Dict[str, Dict]:
-    failed_requests = {}
-    for product in products:
-        response = _send_product(shop=shop, data=product)
+async def _send_shop_products(session, shop: str, products: List[Dict]) -> Dict[str, Dict]:
+    failed_requests = []
+    responses = await gather(*[_send_product(session, shop=shop, data=product) for product in products])
+    for response in responses:
         try:
             response.raise_for_status()
         except Exception:
-            failed_requests[product["productNumber"]] = {
-                "content": json.loads(response.content),
-                "status_code": response.status_code,
-            }
+            failed_requests.append(
+                {
+                    "content": await response.text(),
+                    "status_code": response.status,
+                }
+            )
     return failed_requests
 
 
-def _send_product(shop: str, data: Dict):
-    shop = shop.upper().replace(" ", "")
-    headers = {
-        "X-Account": os.getenv(f"{shop}_POA"),
-        "Authorization": f"ApiKey {os.getenv(f'{shop}_API_KEY')}",
+async def _send_product(session, shop: str, data: Dict):
+    return await session.post(url=os.getenv("LOZUKA_API_URL"), json=data)
+
+
+def _get_auth_header(shop: str) -> dict:
+    _shop = shop.upper().replace(" ", "")
+    if os.getenv(f"{_shop}_POA") is None:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail=f"Missing credentials for shop {shop}",
+            headers={"WWW-Authenticate": "Basic"},
+        )
+    return {
+        "X-Account": os.getenv(f"{_shop}_POA"),
+        "Authorization": f"ApiKey {os.getenv(f'{_shop}_API_KEY')}",
         "Content-Type": "application/json",
         "accept": "*/*",
     }
-    return requests.post(os.getenv("LOZUKA_API_URL"), headers=headers, json=data)
 
 
 COLUMNS = {

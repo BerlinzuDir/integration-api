@@ -23,33 +23,29 @@ def vcr_config():
 @pytest.mark.vcr()
 def test_integrate_products_status_200(test_data):
     response = _post_test_csv_file(client=test_client, data=test_data)
+
+    print(response.content)
     # TODO: check that Lozuka API is called with correct data
     assert response.status_code == 200
-    assert json.loads(response.content) == {"detail": {"failed": {"Almahaba Supermarkt": {}, "Malandra": {}}}}
+    assert json.loads(response.content) == {"detail": {"failed": {"Almahaba Supermarkt": [], "Malandra": []}}}
 
 
 @pytest.mark.vcr()
 def test_integrate_products_lozuka_api_authentification_error_response_status_200(test_data):
     os.environ["ALMAHABASUPERMARKT_API_KEY"] = "1234"
     os.environ["ALMAHABASUPERMARKT_POA"] = "1234"
+    print(os.environ)
     response = _post_test_csv_file(client=test_client, data=test_data)
     assert response.status_code == 200
-    assert json.loads(response.content) == {
-        "detail": {
-            "failed": {
-                "Almahaba Supermarkt": {
-                    "1": {"content": {"message": "Invalid credentials."}, "status_code": 401},
-                    "2": {"content": {"message": "Invalid credentials."}, "status_code": 401},
-                    "3": {"content": {"message": "Invalid credentials."}, "status_code": 401},
-                    "4": {"content": {"message": "Invalid credentials."}, "status_code": 401},
-                    "5": {"content": {"message": "Invalid credentials."}, "status_code": 401},
-                    "6": {"content": {"message": "Invalid credentials."}, "status_code": 401},
-                    "7": {"content": {"message": "Invalid credentials."}, "status_code": 401},
-                },
-                "Malandra": {},
-            }
-        }
-    }
+    assert json.loads(response.content)["detail"]["failed"]["Almahaba Supermarkt"] == [
+        {"content": '{"message":"Invalid credentials."}', "status_code": 401},
+        {"content": '{"message":"Invalid credentials."}', "status_code": 401},
+        {"content": '{"message":"Invalid credentials."}', "status_code": 401},
+        {"content": '{"message":"Invalid credentials."}', "status_code": 401},
+        {"content": '{"message":"Invalid credentials."}', "status_code": 401},
+        {"content": '{"message":"Invalid credentials."}', "status_code": 401},
+        {"content": '{"message":"Invalid credentials."}', "status_code": 401},
+    ]
 
 
 def test_integrate_products_authentification_status_401(test_data):
@@ -87,6 +83,7 @@ def test_set_category_as_list_converts_category_column_to_list():
     data = pd.DataFrame({"categories": ["1", "2", "3"]})
     data = _set_categories_as_list(data)
     assert all([a == b for a, b in zip(data.categories.values, [["1"], ["2"], ["3"]])])
+
 
 @pytest.fixture
 def test_data() -> pd.DataFrame:
